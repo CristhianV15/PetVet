@@ -1,0 +1,191 @@
+; ES011F.INF  -- Windows Still Image Setup File for Windows
+; Copyright (c) 2015 Seiko Epson Corporation
+; Manufacturer: Seiko Epson Corporation
+
+;--------------------------------------------------------------------------------
+
+[Version]
+Signature="$Windows NT$"
+Class=Image
+ClassGUID={6bdd1fc6-810f-11d0-bec7-08002be2092f}
+Provider=%Mfg%
+CatalogFile.nt=es011f.cat
+DriverVer=01/27/2015,1.0.0.0
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[DestinationDirs]
+DefaultDestDir=11							; LDID_SYS
+
+;--------------------------------------------------------------------------------
+
+[Strings]
+Mfg					= "EPSON"
+DeviceDesc			= "EPSON L575 Series"
+DSName				= "EPSON L575 Series"
+Button0				= "Scan Button"
+Button1				= "Scan to PDF Button"
+Button2				= "Scan to E-mail Button"
+DiskName			= "EPSON Scanners Driver Disk"
+
+;--------------------------------------------------------------------------------
+
+[Manufacturer]
+%Mfg%=Models,NTx86.5.1,NTx86.6.0,NTamd64.5.2,NTamd64.6.0
+
+[Models]
+
+[Models.NTx86.5.1]
+%DeviceDesc%  = USB.ESWIA1,USB\VID_04B8&PID_1107&MI_00
+
+[Models.NTx86.6.0]
+%DeviceDesc%  = USB.ESWIA2,USB\VID_04B8&PID_1107&MI_00
+
+[Models.NTamd64.5.2]
+%DeviceDesc%  = USB.ESWIA1.x64,USB\VID_04B8&PID_1107&MI_00
+
+[Models.NTamd64.6.0]
+%DeviceDesc%  = USB.ESWIA2.x64,USB\VID_04B8&PID_1107&MI_00
+
+;--------------------------------------------------------------------------------
+
+[USB.ESWIA1]
+Include=sti.inf
+Needs=STI.USBSection
+SubClass=StillImage
+DeviceType=1
+DeviceSubType=0x01
+Capabilities=0x13
+Events=ESWIA.Events
+DeviceData=ESWIA.DeviceData
+AddReg=ESWIAUD.AddReg,USB.IF.AddReg
+CopyFiles=ESWIAUD.USD.Files
+
+[USB.ESWIA1.Services]
+Include=sti.inf
+Needs=STI.USBSection.Services
+
+[USB.ESWIA2]
+Include=sti.inf
+Needs=STI.USBSection
+SubClass=StillImage
+DeviceType=1
+DeviceSubType=0x01
+Capabilities=0x13
+Events=ESWIA.Events
+DeviceData=ESWIA.DeviceData
+AddReg=ESWIA2UD.AddReg,USB.IF.AddReg
+CopyFiles=ESWIA2UD.USD.Files
+
+[USB.ESWIA2.Services]
+Include=sti.inf
+Needs=STI.USBSection.Services
+
+;--------------------------------------------------------------------------------
+
+[USB.ESWIA1.x64]
+Include=sti.inf
+Needs=STI.USBSection
+SubClass=StillImage
+DeviceType=1
+DeviceSubType=0x01
+Capabilities=0x13
+Events=ESWIA.Events
+DeviceData=ESWIA.DeviceData
+AddReg=ESWIAUD.x64.AddReg,USB.IF.AddReg
+CopyFiles=ESWIAUD.x64.USD.Files
+
+[USB.ESWIA1.x64.Services]
+Include=sti.inf
+Needs=STI.USBSection.Services
+
+[USB.ESWIA2.x64]
+Include=sti.inf
+Needs=STI.USBSection
+SubClass=StillImage
+DeviceType=1
+DeviceSubType=0x01
+Capabilities=0x13
+Events=ESWIA.Events
+DeviceData=ESWIA.DeviceData
+AddReg=ESWIA2UD.x64.AddReg,USB.IF.AddReg
+CopyFiles=ESWIA2UD.x64.USD.Files
+
+[USB.ESWIA2.x64.Services]
+Include=sti.inf
+Needs=STI.USBSection.Services
+
+;--------------------------------------------------------------------------------
+
+[ESWIA.DeviceData]
+TwainDS=%DSName%
+Model=%DeviceDesc%
+NumButtons=3,1
+HOptRes=1200,1
+VOptRes=2400,1
+ModelCode="ES011F"
+OptionCaps=0x00,1
+
+[ESWIA.Events]
+Button0=%Button0%,{A6C5A715-8C6E-11D2-977A-0000F87A926F},*
+Button1=%Button1%,{FC4767C1-C8B3-48A2-9CFA-2E90CB3D3590},*
+Button2=%Button2%,{154E27BE-B617-4653-ACC5-0FD7BD4C65CE},*
+
+;--------------------------------------------------------------------------------
+
+[ESWIAUD.AddReg]
+HKR,,DevLoader,,*NTKERN
+HKR,,USDClass,,"{580A2401-9E98-4a8a-BEC5-94173FEE8968}"
+HKCR,CLSID\{580A2401-9E98-4a8a-BEC5-94173FEE8968},,,"EPSON USD"
+HKCR,CLSID\{580A2401-9E98-4a8a-BEC5-94173FEE8968}\InProcServer32,,,%11%\eswiaud.dll
+HKCR,CLSID\{580A2401-9E98-4a8a-BEC5-94173FEE8968}\InProcServer32,ThreadingModel,,"Both"
+
+[ESWIAUD.x64.AddReg]
+HKR,,DevLoader,,*NTKERN
+HKR,,USDClass,,"{580A2401-9E98-4a8a-BEC5-94173FEE8968}"
+HKCR,CLSID\{580A2401-9E98-4a8a-BEC5-94173FEE8968},,,"EPSON USD"
+HKCR,CLSID\{580A2401-9E98-4a8a-BEC5-94173FEE8968}\InProcServer32,,,%11%\esxwiaud.dll
+HKCR,CLSID\{580A2401-9E98-4a8a-BEC5-94173FEE8968}\InProcServer32,ThreadingModel,,"Both"
+
+[ESWIA2UD.AddReg]
+HKR,,DevLoader,,*NTKERN
+HKR,,USDClass,,"{511F3F20-732C-41f3-B413-07DA0EC825C5}"
+HKCR,CLSID\{511F3F20-732C-41f3-B413-07DA0EC825C5},,,"EPSON USD"
+HKCR,CLSID\{511F3F20-732C-41f3-B413-07DA0EC825C5}\InProcServer32,,,%11%\esw2ud.dll
+HKCR,CLSID\{511F3F20-732C-41f3-B413-07DA0EC825C5}\InProcServer32,ThreadingModel,,"Both"
+
+[ESWIA2UD.x64.AddReg]
+HKR,,DevLoader,,*NTKERN
+HKR,,USDClass,,"{511F3F20-732C-41f3-B413-07DA0EC825C5}"
+HKCR,CLSID\{511F3F20-732C-41f3-B413-07DA0EC825C5},,,"EPSON USD"
+HKCR,CLSID\{511F3F20-732C-41f3-B413-07DA0EC825C5}\InProcServer32,,,%11%\esxw2ud.dll
+HKCR,CLSID\{511F3F20-732C-41f3-B413-07DA0EC825C5}\InProcServer32,ThreadingModel,,"Both"
+
+[USB.IF.AddReg]
+HKR,,HardwareConfig,1,4
+
+;--------------------------------------------------------------------------------
+
+[ESWIAUD.USD.Files]
+eswiaud.dll,,,32
+
+[ESWIAUD.x64.USD.Files]
+esxwiaud.dll,,,32
+
+[ESWIA2UD.USD.Files]
+esw2ud.dll,,,32
+
+[ESWIA2UD.x64.USD.Files]
+esxw2ud.dll,,,32
+
+;--------------------------------------------------------------------------------
+
+[SourceDisksNames]
+2001=%DiskName%,ModUsd.cab,,
+
+[SourceDisksFiles]
+eswiaud.dll=2001
+esxwiaud.dll=2001
+esw2ud.dll=2001
+esxw2ud.dll=2001

@@ -1,0 +1,13 @@
+{
+	"ini_list"	: 
+	[
+		{
+			"PrinterModelName"	: ["MP 2555","MP 3055","MP 3555","MP 4055","MP 5055","MP 6055","DSm 2625","DSm 2630","DSm 2635","DSm 2640","DSm 2650","DSm 2660","MP 2595J","MP 3095J","MP 3595J"],
+			"LoadDll"			: "mfricr64.dll",
+			"ResDll"			: "RD067d64.dll",
+			"Version"			: "1.1.20.0"
+			
+		}
+	]
+}
+

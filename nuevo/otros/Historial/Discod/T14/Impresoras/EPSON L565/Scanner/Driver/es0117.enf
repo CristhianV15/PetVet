@@ -1,0 +1,23 @@
+; Copyright (C) SEIKO EPSON CORP. 2004
+
+
+[ENAppInfo]
+ENFid		= 0x4e656f6e
+ENFVersion 	= 4.02
+ProductID	= 0x0003
+Reboot		= 1
+ProductName	= "EPSON Scan"
+Installer	= ".\setup.exe"
+InstallOption	= /ES0117 /SU="/ES0117,%Target:IPv4x%,%Target:MACx%"
+UnsupportedOS_x86=0117
+UnsupportedOS_x64=0117
+UnsupportedOS_IA64=*
+AppVersion	= "4.0.1"
+AddressCapability	= 0x003C
+DeviceCapability	= 0x0003
+InstallOption_2	= /ES0117 /SU="/ID:ES0117,%Target:Addr2%"
+InstallOption_Local = /ES0117 /SU="/ID:ES0117,LOCAL"
+
+[ENAppOption]
+DepModelName1	= "L565 Series"
+DepModelName2	= "L566 Series"

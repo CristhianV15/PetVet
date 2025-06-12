@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  SAPGUI for Windows 7300 3 26 2 2020 18:33:19 Hora est. Pacífico, Sudamérica -->
+<SAPTREE version="7300.3.13.1084">
+	<Files>
+		<File type="Connections" name="saplogon.ini"/>
+		<File type="Shortcuts" name="sapshortcut.ini"/>
+	</Files>
+	<Nodes>
+		<Favorites name="Favorites" expanded="1" uuid="c033875d-773b-4cf0-ac6e-9d9ddf761bff">
+		</Favorites>
+		<Shortcuts name="Shortcuts" expanded="1" uuid="8ed516d4-c459-44bc-8ec7-706fab5afea9">
+		</Shortcuts>
+		<Connections name="Connections" expanded="1" uuid="ba731a29-1c00-4690-8302-b28800a37f31">
+			<Item name="B) SAP ECC 6.0 - CONTROL DE CALIDAD" type="connection" uuid="2edaa96d-8cd5-405d-a391-caef9e16a897"><Memo xml:space="preserve">Jramosmed
+Sistemas01</Memo></Item></Connections>
+	</Nodes>
+</SAPTREE>

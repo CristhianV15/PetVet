@@ -1,0 +1,137 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>eMedia Release notes</title>
+
+<style>
+BODY            { font-family: Verdana, Arial, Helvetica; font-size: 10pt; background-color: #9FC4CC; background-image:url(back.jpg); }
+TD              { font-size: 10 pt }
+A:LINK          { color: royalblue; font-weight: bold; text-decoration: none }
+A:HOVER         { color: royalblue; font-weight: bold; text-decoration: underline }
+A:VISITED       { color: royalblue; font-weight: bold; text-decoration: none }
+A:VISITED:HOVER { color: royalblue; font-weight: bold; text-decoration: underline }
+</style>
+
+</head>
+
+<body>
+
+<a name="InstallProcess">
+<table width=100% cellpadding=0 cellspacing=0>
+  <tr><td width=100%><h3>Installation process</h3></td><td align=right nowrap></a><a href="../../Notes.htm"><font size=1>Back</font></a></td></tr>
+</table>
+</a>
+
+<p> eMedia uses for database access in professional version and standard version
+in demo mode Microsoft ActiveX Data Objects™ and OLE DB. But, as ADO is a DCOM
+component, your system must be up-to-date. The eMedia setup program checks for
+out-of-date components and gives you the ability to update your computer.</p>
+
+</a>
+
+<p> <span lang="fr">The setup process uses three programs from autorun:</span></p>
+
+<blockquote>
+  <table cellspacing=5 cellpadding=0>
+  <tr><td align="left" valign="top"><b><span lang="fr">Autorun.exe</span></b></td>
+    <td align="left" valign="top"><span lang="fr">Launched by Windows when you
+    insert the CD. It will help you to install the printer driver and/or eMedia
+    Card Designer.</span></td></tr>
+  <tr><td align="left" valign="top"><b><span lang="fr">eMedia\Setup.exe</span></b></td>
+    <td align="left" valign="top"><span lang="fr">Performs steps 1 to 9 below.</span></td></tr>
+  <tr><td align="left" valign="top"><span lang="fr"><b>
+    eMedia\Setup\Setup.exe</b></span></td>
+    <td align="left" valign="top"><span lang="fr">Perform steps 10 to 12 below.</span></td></tr>
+  </table>
+</blockquote>
+
+<p>The setup program performs the following tasks:</p>
+
+<blockquote>
+  <table cellspacing=5 cellpadding=0>
+    <tr>
+      <td valign=top nowrap><b>1.&nbsp;</b></td>
+      <td>On a Microsoft Windows 95™ system, the setup program checks if DCOM for
+        Windows 95 version 1.3 is installed.<br>
+        On a Windows 98™ or Windows 98 SE™ system&nbsp;, the setup program checks if
+        DCOM for Windows 98 version 1.3 is installed.<br>
+        DCOM version 1.3 is used by MDAC and eMedia.</td>
+    </tr>
+    <tr>
+      <td valign=top nowrap><b>2.&nbsp;</b></td>
+      <td>The setup program checks if Microsoft Data Access Components™
+        version 2.5 is installed. MDAC 2.5 is used by eMedia.</td>
+    </tr>
+    <tr>
+      <td valign=top nowrap><b>3.&nbsp;</b></td>
+      <td>The setup program checks if Microsoft Windows Installer™ is
+        installed.</td>
+    </tr>
+    <tr>
+      <td valign=top nowrap><b>4.&nbsp;</b></td>
+      <td>A window is displayed if one or more of these components is not
+        installed.</td>
+    </tr>
+    <tr>
+      <td valign=top nowrap><b>5.&nbsp;</b></td>
+      <td>On a Microsoft Windows NT™ 4.0 or Windows 2000™ system, the setup
+        program displays an alert to prevent the user to install the components
+        without administrative rights, as these installations will fail.</td>
+    </tr>
+    <tr>
+      <td valign=top nowrap><b>6.&nbsp;</b></td>
+      <td>The setup program checks if Microsoft Internet Explorer™ version
+        4.01+ is installed. If not, an alert is displayed as all the features of
+        the eMedia online help system will only be available with a version of
+        IE greater than 4.01.</td>
+    </tr>
+    <tr>
+      <td valign=top nowrap><b>7.&nbsp;</b></td>
+      <td>If DCOM is not installed, or if its version is lower than 1.3, the
+        setup program installs DCOM for Windows 95 (on a Microsoft Windows 95™
+        system) or DCOM for Windows 98 (on a Microsoft Windows 98™ system or
+        on a Microsoft Windows 98 Second Edition™ system). Then, the setup
+        program registers itself to be restarted with Windows and displays a
+        message asking the user to reboot the computer. When the system will
+        restart, the setup program will be launched automatically. If it
+        doesn't, the user will have to do it by himself.</td>
+    </tr>
+    <tr>
+      <td valign=top nowrap><b>8.&nbsp;</b></td>
+      <td>If MDAC is not installed, or if its version is lower than 2.5, the
+        setup program installs the component. This installation can take a very
+        long time (more than 10 minutes). The user must not abort the
+        installation. If an error occurs, a message will be displayed. If MDAC
+        needs a reboot, the setup program will ask the user at the very end of
+        the installation process.</td>
+    </tr>
+    <tr>
+      <td valign=top nowrap><b>9.&nbsp;</b></td>
+      <td>If Microsoft Windows Installer™ is not installed, the setup program
+        installs this component.</td>
+    </tr>
+    <tr>
+      <td valign=top nowrap><b>10.</b></td>
+      <td>The user can choose the default language that will be used in eMedia.</td>
+    </tr>
+    <tr>
+      <td valign=top nowrap><b>11.&nbsp;</b></td>
+      <td>Then, the setup program uses Microsoft Windows Installer™ to install
+        eMedia.</td>
+    </tr>
+    <tr>
+      <td valign=top nowrap><b>12.&nbsp;</b></td>
+      <td>Once eMedia installed, if restarting the system is needed (by the DCOM
+        or MDAC installations), a window displays an alert, asking the user to
+        reboot.</td>
+    </tr>
+  </table>
+</blockquote>
+
+<p>The entire process is automatic. The user has only to accept the default
+choices by clicking on the &quot;Next&quot; button.</p>
+
+</body>
+</html>

@@ -1,0 +1,477 @@
+;------------------------------------------------------------
+; Copyright (c) 2007-2020 RICOH COMPANY, LTD
+; All Rights Reserved
+; Printer Driver Setup Information File
+;------------------------------------------------------------
+
+[Version]
+Signature   = "$Windows NT$"
+Provider    = %Ricoh%
+ClassGUID   = {4D36E979-E325-11CE-BFC1-08002BE10318}
+Class       = Printer
+DriverVer  = 03/31/2020,1.4.0.0
+CatalogFile = rica67.cat
+
+[Manufacturer]
+%Gestetner%=Gestetner,NTamd64
+%infotec%=infotec,NTamd64
+%LANIER%=LANIER,NTamd64
+%NRG%=NRG,NTamd64
+%Ricoh%=Ricoh,NTamd64
+%SAVIN%=SAVIN,NTamd64
+
+
+;WindowsXP(amd64)
+[Gestetner.NTamd64]
+"Gestetner MP 2555 PCL 6"=Gestetner_MP_2555_64.dat,USBPRINT\GestetnerMP_2555D5AF,LPTENUM\GestetnerMP_2555D5AF,GestetnerMP_2555D5AF
+"Gestetner MP 3055 PCL 6"=Gestetner_MP_3055_64.dat,USBPRINT\GestetnerMP_305528BE,LPTENUM\GestetnerMP_305528BE,GestetnerMP_305528BE
+"Gestetner MP 3555 PCL 6"=Gestetner_MP_3555_64.dat,USBPRINT\GestetnerMP_355529AE,LPTENUM\GestetnerMP_355529AE,GestetnerMP_355529AE
+"Gestetner MP 4055 PCL 6"=Gestetner_MP_4055_64.dat,USBPRINT\GestetnerMP_40555CBF,LPTENUM\GestetnerMP_40555CBF,GestetnerMP_40555CBF
+"Gestetner MP 5055 PCL 6"=Gestetner_MP_5055_64.dat,USBPRINT\GestetnerMP_5055A0BE,LPTENUM\GestetnerMP_5055A0BE,GestetnerMP_5055A0BE
+"Gestetner MP 6055 PCL 6"=Gestetner_MP_6055_64.dat,USBPRINT\GestetnerMP_6055E4BE,LPTENUM\GestetnerMP_6055E4BE,GestetnerMP_6055E4BE
+"Gestetner DSm 2625 PCL 6"=Gestetner_DSm_2625_64.dat,USBPRINT\GestetnerDSm_26259BE2,LPTENUM\GestetnerDSm_26259BE2,GestetnerDSm_26259BE2
+"Gestetner DSm 2630 PCL 6"=Gestetner_DSm_2630_64.dat,USBPRINT\GestetnerDSm_26300823,LPTENUM\GestetnerDSm_26300823,GestetnerDSm_26300823,GestetnerDSm_2630_823
+"Gestetner DSm 2635 PCL 6"=Gestetner_DSm_2635_64.dat,USBPRINT\GestetnerDSm_26350BE3,LPTENUM\GestetnerDSm_26350BE3,GestetnerDSm_26350BE3,GestetnerDSm_2635_BE3
+"Gestetner DSm 2640 PCL 6"=Gestetner_DSm_2640_64.dat,USBPRINT\GestetnerDSm_26403821,LPTENUM\GestetnerDSm_26403821,GestetnerDSm_26403821
+"Gestetner DSm 2650 PCL 6"=Gestetner_DSm_2650_64.dat,USBPRINT\GestetnerDSm_2650A820,LPTENUM\GestetnerDSm_2650A820,GestetnerDSm_2650A820
+"Gestetner DSm 2660 PCL 6"=Gestetner_DSm_2660_64.dat,USBPRINT\GestetnerDSm_26605820,LPTENUM\GestetnerDSm_26605820,GestetnerDSm_26605820
+
+[infotec.NTamd64]
+"infotec MP 2555 PCL 6"=infotec_MP_2555_64.dat,USBPRINT\infotecMP_255529F3,LPTENUM\infotecMP_255529F3,infotecMP_255529F3
+"infotec MP 3055 PCL 6"=infotec_MP_3055_64.dat,USBPRINT\infotecMP_30551563,LPTENUM\infotecMP_30551563,infotecMP_30551563
+"infotec MP 3555 PCL 6"=infotec_MP_3555_64.dat,USBPRINT\infotecMP_35551473,LPTENUM\infotecMP_35551473,infotecMP_35551473
+"infotec MP 4055 PCL 6"=infotec_MP_4055_64.dat,USBPRINT\infotecMP_4055A0E3,LPTENUM\infotecMP_4055A0E3,infotecMP_4055A0E3
+"infotec MP 5055 PCL 6"=infotec_MP_5055_64.dat,USBPRINT\infotecMP_50555CE2,LPTENUM\infotecMP_50555CE2,infotecMP_50555CE2
+"infotec MP 6055 PCL 6"=infotec_MP_6055_64.dat,USBPRINT\infotecMP_605518E2,LPTENUM\infotecMP_605518E2,infotecMP_605518E2
+
+[LANIER.NTamd64]
+"LANIER MP 2555 PCL 6"=LANIER_MP_2555_64.dat,USBPRINT\LANIERMP_2555F6D0,LPTENUM\LANIERMP_2555F6D0,LANIERMP_2555F6D0
+"LANIER MP 3055 PCL 6"=LANIER_MP_3055_64.dat,USBPRINT\LANIERMP_30550BC3,LPTENUM\LANIERMP_30550BC3,LANIERMP_30550BC3,LANIERMP_3055_BC3
+"LANIER MP 3555 PCL 6"=LANIER_MP_3555_64.dat,USBPRINT\LANIERMP_35550AD1,LPTENUM\LANIERMP_35550AD1,LANIERMP_35550AD1,LANIERMP_3555_AD1
+"LANIER MP 4055 PCL 6"=LANIER_MP_4055_64.dat,USBPRINT\LANIERMP_40557FC2,LPTENUM\LANIERMP_40557FC2,LANIERMP_40557FC2
+"LANIER MP 5055 PCL 6"=LANIER_MP_5055_64.dat,USBPRINT\LANIERMP_505581C3,LPTENUM\LANIERMP_505581C3,LANIERMP_505581C3
+"LANIER MP 6055 PCL 6"=LANIER_MP_6055_64.dat,USBPRINT\LANIERMP_6055C7C3,LPTENUM\LANIERMP_6055C7C3,LANIERMP_6055C7C3
+
+[NRG.NTamd64]
+"NRG MP 2555 PCL 6"=NRG_MP_2555_64.dat,USBPRINT\NRGMP_2555141B,LPTENUM\NRGMP_2555141B,NRGMP_2555141B
+"NRG MP 3055 PCL 6"=NRG_MP_3055_64.dat,USBPRINT\NRGMP_3055E90A,LPTENUM\NRGMP_3055E90A,NRGMP_3055E90A
+"NRG MP 3555 PCL 6"=NRG_MP_3555_64.dat,USBPRINT\NRGMP_3555E81A,LPTENUM\NRGMP_3555E81A,NRGMP_3555E81A
+"NRG MP 4055 PCL 6"=NRG_MP_4055_64.dat,USBPRINT\NRGMP_40559D0B,LPTENUM\NRGMP_40559D0B,NRGMP_40559D0B
+"NRG MP 5055 PCL 6"=NRG_MP_5055_64.dat,USBPRINT\NRGMP_5055610A,LPTENUM\NRGMP_5055610A,NRGMP_5055610A
+"NRG MP 6055 PCL 6"=NRG_MP_6055_64.dat,USBPRINT\NRGMP_6055250A,LPTENUM\NRGMP_6055250A,NRGMP_6055250A
+
+[Ricoh.NTamd64]
+"RICOH MP 2555 PCL 6"=RICOH_MP_2555_64.dat,USBPRINT\RICOHMP_2555A41D,LPTENUM\RICOHMP_2555A41D,RICOHMP_2555A41D
+"RICOH MP 3055 PCL 6"=RICOH_MP_3055_64.dat,USBPRINT\RICOHMP_3055590C,LPTENUM\RICOHMP_3055590C,RICOHMP_3055590C
+"RICOH MP 3555 PCL 6"=RICOH_MP_3555_64.dat,USBPRINT\RICOHMP_3555581C,LPTENUM\RICOHMP_3555581C,RICOHMP_3555581C
+"RICOH MP 4055 PCL 6"=RICOH_MP_4055_64.dat,USBPRINT\RICOHMP_40552D0D,LPTENUM\RICOHMP_40552D0D,RICOHMP_40552D0D
+"RICOH MP 5055 PCL 6"=RICOH_MP_5055_64.dat,USBPRINT\RICOHMP_5055D10C,LPTENUM\RICOHMP_5055D10C,RICOHMP_5055D10C
+"RICOH MP 6055 PCL 6"=RICOH_MP_6055_64.dat,USBPRINT\RICOHMP_6055950C,LPTENUM\RICOHMP_6055950C,RICOHMP_6055950C
+"RICOH MP 2595J PCL 6"=RICOH_MP_2595J_64.dat,USBPRINT\RICOHMP_2595JFD25,LPTENUM\RICOHMP_2595JFD25,RICOHMP_2595JFD25
+"RICOH MP 3095J PCL 6"=RICOH_MP_3095J_64.dat,USBPRINT\RICOHMP_3095JF118,LPTENUM\RICOHMP_3095JF118,RICOHMP_3095JF118
+"RICOH MP 3595J PCL 6"=RICOH_MP_3595J_64.dat,USBPRINT\RICOHMP_3595J3D18,LPTENUM\RICOHMP_3595J3D18,RICOHMP_3595J3D18
+
+[SAVIN.NTamd64]
+"SAVIN MP 2555 PCL 6"=SAVIN_MP_2555_64.dat,USBPRINT\SAVINMP_25550870,LPTENUM\SAVINMP_25550870,SAVINMP_25550870,SAVINMP_2555_870
+"SAVIN MP 3055 PCL 6"=SAVIN_MP_3055_64.dat,USBPRINT\SAVINMP_3055F561,LPTENUM\SAVINMP_3055F561,SAVINMP_3055F561
+"SAVIN MP 3555 PCL 6"=SAVIN_MP_3555_64.dat,USBPRINT\SAVINMP_3555F471,LPTENUM\SAVINMP_3555F471,SAVINMP_3555F471
+"SAVIN MP 4055 PCL 6"=SAVIN_MP_4055_64.dat,USBPRINT\SAVINMP_40558360,LPTENUM\SAVINMP_40558360,SAVINMP_40558360
+"SAVIN MP 5055 PCL 6"=SAVIN_MP_5055_64.dat,USBPRINT\SAVINMP_50557D61,LPTENUM\SAVINMP_50557D61,SAVINMP_50557D61
+"SAVIN MP 6055 PCL 6"=SAVIN_MP_6055_64.dat,USBPRINT\SAVINMP_60553961,LPTENUM\SAVINMP_60553961,SAVINMP_60553961
+
+
+[Gestetner_MP_2555_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[Gestetner_MP_3055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[Gestetner_MP_3555_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[Gestetner_MP_4055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[Gestetner_MP_5055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[Gestetner_MP_6055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[Gestetner_DSm_2625_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[Gestetner_DSm_2630_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[Gestetner_DSm_2635_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[Gestetner_DSm_2640_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[Gestetner_DSm_2650_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[Gestetner_DSm_2660_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[infotec_MP_2555_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[infotec_MP_3055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[infotec_MP_3555_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[infotec_MP_4055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[infotec_MP_5055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[infotec_MP_6055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[LANIER_MP_2555_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[LANIER_MP_3055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[LANIER_MP_3555_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[LANIER_MP_4055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[LANIER_MP_5055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[LANIER_MP_6055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[NRG_MP_2555_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[NRG_MP_3055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[NRG_MP_3555_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[NRG_MP_4055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[NRG_MP_5055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[NRG_MP_6055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[RICOH_MP_2555_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[RICOH_MP_3055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[RICOH_MP_3555_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[RICOH_MP_4055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[RICOH_MP_5055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[RICOH_MP_6055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[RICOH_MP_2595J_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[RICOH_MP_3095J_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[RICOH_MP_3595J_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[SAVIN_MP_2555_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[SAVIN_MP_3055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[SAVIN_MP_3555_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[SAVIN_MP_4055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[SAVIN_MP_5055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+[SAVIN_MP_6055_64.dat]
+CopyFiles		= RPD_FILES,RPD_COMMON,RPD_COMMON_SYS32
+DataSection		= RPD_DATA
+DataFile		= rica67cd.psz
+LanguageMonitor = rica67lm,rica67lm.dll
+FeatureScore		= 0x80
+
+
+[RPD_FILES]
+rica67ui.dll,rica67ui.dl_
+rica67ui.irj
+rica67ui.rdj
+rica67ui.rcf
+rica67ug.dll,rica67ug.dl_
+rica67ug.miz
+rica67ur.dll,rica67ur.dl_
+rica67gr.dll,rica67gr.dl_
+rica67gl.dll,rica67gl.dl_
+rica67ci.dll,rica67ci.dl_
+rica67cd.dll,rica67cd.dl_
+rica67cd.psz
+rica67cf.cfz
+rica67cl.ini
+rica67ch.chm
+rica67cz.dlz
+rica67cj.dll,rica67cj.dl_
+rica67ct.dll,rica67ct.dl_
+rica67cb.dll,rica67cb.dl_
+rica67tl.exe,rica67tl.ex_
+
+[RPD_COMMON_SYS32]
+rica67lm.dll,rica67lm.dl_,,0x00000020
+
+[RPD_COMMON]
+ricdb64.dll,ricdb64.dl_,,0x00000020
+mfricr64.dll,mfricr64.dl_,,0x00000020
+RD067d64.dll,RD067d64.dl_,,0x00000020
+
+[RPD_DATA]
+ConfigFile		= rica67ui.dll
+DriverFile		= rica67gr.dll
+HelpFile		= rica67ch.chm
+
+[DestinationDirs]
+DefaultDestDir		= 66000
+RPD_COMMON_SYS32	 	= 66002
+
+[SourceDisksNames.amd64]
+1 = %DSK%,,,
+
+[PrinterPackageInstallation.amd64]
+PackageAware			=TRUE
+
+[SourceDisksFiles.amd64]
+rica67ui.dl_		= 1
+rica67ui.irj		= 1
+rica67ui.rdj		= 1
+rica67ui.rcf		= 1
+rica67ug.dl_		= 1
+rica67ug.miz		= 1
+rica67ur.dl_		= 1
+rica67gr.dl_		= 1
+rica67gl.dl_		= 1
+rica67ci.dl_		= 1
+rica67cd.dl_		= 1
+rica67cd.psz		= 1
+rica67cf.cfz		= 1
+rica67cl.ini		= 1
+rica67ch.chm		= 1
+rica67cz.dlz		= 1
+rica67cj.dl_		= 1
+rica67ct.dl_		= 1
+rica67cb.dl_		= 1
+rica67lm.dl_		= 1
+ricdb64.dl_			= 1
+mfricr64.dl_		= 1
+rica67tl.ex_              = 1
+RD067d64.dl_		= 1
+
+[Strings]
+Ricoh="Ricoh"
+Gestetner="Gestetner"
+infotec="infotec"
+LANIER="LANIER"
+NRG="NRG"
+SAVIN="SAVIN"
+DSK= "PCL6 Printer Driver Disk1"

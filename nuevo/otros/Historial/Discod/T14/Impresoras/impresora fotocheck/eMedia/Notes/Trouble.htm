@@ -1,0 +1,240 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>eMedia Release notes</title>
+
+<style> 
+BODY            { font-family: Verdana, Arial, Helvetica; font-size: 10pt; background-color: #9FC4CC; background-image:url(back.jpg); }
+TD              { font-size: 10 pt }
+A:LINK          { color: royalblue; font-weight: bold; text-decoration: none }
+A:HOVER         { color: royalblue; font-weight: bold; text-decoration: underline }
+A:VISITED       { color: royalblue; font-weight: bold; text-decoration: none }
+A:VISITED:HOVER { color: royalblue; font-weight: bold; text-decoration: underline }
+LI              { margin-top: 6 pt }
+</style>
+
+</head>
+
+<body>
+
+<a name="InstallTrouble">
+<table width=100% cellpadding=0 cellspacing=0>
+  <tr><td width=100%><h3>Installation troubleshoot</h3></td><td align=right nowrap></a><a href="../../Notes.htm"><font size=1>Back</font></a></td></tr>
+</table>
+</a>
+
+<hr size="1">
+
+<p><b><font size="3">SUMMARY</font></b></p>
+
+<p><a href="#Q01">The auto-installation doesn't start.</a><br>
+<a href="#Q02">The installation won't start: "The system file is not suitable for running MS-DOS and Microsoft applications..."</a><br>
+<a href="#Q03">SETUP.EXE not found after DCOM95/98 installation</a><br>
+<a href="#Q04">eMedia doesn't start after DCOM and MDAC installation without rebooting</a><br>
+<a href="#Q05">eMedia doesn't start after DCOM installation without rebooting</a><br>
+<a href="#Q06">Computer hangs while installing MDAC</a><br>
+<a href="#Q07">Error<span lang="fr"> EVPB1</span>, Sub-error #2</a><br>
+<a href="#Q08">I can't see the online help</a><br>
+<a href="#Q09">Errors 1931 on hhctrl.ocx or hh.exe</a><br>
+<a href="#Q00">Other problems...</a></p>
+
+<hr size="1">
+
+<p><a name="Q01"><i><b><font color="#000080">Q: When I insert the CD in the drive, the installation doesn't start
+automatically. What's wrong?</font></b></i></a></p>
+
+<p>R: You probably deactivated the auto-insert notification. To enable this
+notification, open the <b>Start</b> menu, select <b>Settings</b>, then <b>Control
+Panel</b>, and double-click on the <b>System</b> icon. Double-click on the <b>CDROM</b>
+branch on the <b>Device Manager</b> tab, and then double-click the entry for
+your CD-ROM drive. On the <b>Settings</b> tab, check the <b>Auto Insert
+Notification</b> check box. Click <b>OK</b>, click <b>Close</b>, and then click <b>Yes</b>
+when you are prompted to restart your computer.</p>
+
+<p>You can also launch manually the auto-insert application. Open your Windows
+Explorer. Double-click on your CD-ROM drive. Click on the <b>AUTORUN</b>
+directory, then double-click on the <b>AUTORUN.EXE</b> program.</p>
+
+<hr size="1">
+
+<p><a name="Q02"><i><b><font color="#000080">Q: When I insert the CD, the following error
+is displayed: "c:\windows\system32\autoexec.nt. The system file is not suitable for running
+MS-DOS and Microsoft applications. Choose 'Close' to terminate the application". The name of
+the file may be "autoexec.nt" or "config.nt"</font></b></i></a></p>
+
+<p>R: Please refer to the following article from the Microsoft Support Knowledge base:<br>
+<a href="http://support.microsoft.com/default.aspx?scid=kb;en-us;324767" target=_blank>http://support.microsoft.com/default.aspx?scid=kb;en-us;324767</a></p>
+<p>When you insert the CD in the drive, Windows launches a program called <b>AUTORUN.EXE</b> located in
+the <b>AUTORUN</b> folder of the CD. This program is a 16-bits application that lets you choose 
+between installing the software and visit our internet web site.</p>
+<p>To install eMedia Card Designer, browse the "<b>\eMedia</b>" folder and launch the <b>setup.exe</b>
+program located in it.</p>
+
+<hr size="1">
+
+<p><a name="Q03"><i><b><font color="#000080">Q: After installing DCOM for Windows 95 or DCOM for Windows 98, the
+computer asks me to reboot the system. When the system restarts, a message box
+tells me that SETUP.EXE cannot be found. What must I do?</font></b></i></a></p>
+
+<p>R: The eMedia setup program is probably on a network drive, or on a drive
+that is not available at boot time. Click <b>OK</b> to close the box. Let your
+system finish the restart, then launch manually the eMedia setup program (see
+above). The eMedia setup program will check your system and find that DCOM is
+installed. The installation process will then continue.</p>
+
+<hr size="1">
+
+<p><a name="Q04"><i><font color="#000080"><b>Q: I had installed successfully DCOM, then MDAC without restarting the
+system. I restarted the system at the very end of the installation process. Now,
+eMedia doesn't work and displays error messages when I start it. Is there a bug
+in the installation application?</b></font></i></a></p>
+
+<p>R: MDAC must be installed only once DCOM is fully functionnal. If you didn't
+reboot between the DCOM and MDAC installations, MDAC is incorrectly installed,
+and eMedia encounters problems, due to the unsuccessful installation of MDAC.
+Re-launch the eMedia setup program to correct the problem (see above).</p>
+
+<hr size="1">
+
+<p><a name="Q05"><i><b><font color="#000080">Q: I installed sucessfully DCOM but didn't restart the computer. Then, I
+restarted the eMedia setup program, and this one tells me that DCOM is not
+installed!</font></b></i></a></p>
+
+<p>R: This is normal. DCOM is only fully installed once your computer has been
+restarted.</p>
+
+<hr size="1">
+
+<p><a name="Q06"><i><b><font color="#000080">Q: When eMedia setup installs MDAC, my computer hangs.</font></b></i></a></p>
+
+<p>R: Try to use the NumLock key. If the light goes out and in, your computer
+isn't halted. The MDAC installation process can take a very long time. Up to ten
+minutes. Let MDAC installs itself completely. It can be very time consuming.</p>
+
+<hr size="1">
+
+<p><a name="Q07"><i><b><font color="#000080">Q: I had installed successfully eMedia, but when
+I start the software, the following error occurs: &quot;</font>Error nn,
+sub-error 2 (EVPB1)<font color="#000080">&quot;.
+The eMedia.log file in the eMedia installation folder contains the following
+line: &quot;EVPB1 nn : Sub-error #2&quot;. I can't start eMedia anymore.</font></b></i></a></p>
+
+<p>R: This error occurs on certain systems and is due to a partial installation
+of MDAC components on eMedia setup. The major cause of this error is a
+compatibility problem between MDAC 2.5 provided with eMedia and the MDAC version
+currently on the system.</p>
+
+<p>You can resolve this problem by installing <b>MDAC 2.7.0.7713.4</b>, provided
+on the distribution CD:</p>
+
+<ul>
+  <li>Insert the eMedia installation CD in your drive.</li>
+  <li>With your Windows Explorer, browse the &quot;<b>\eMedia\Support</b>&quot;
+    folder.</li>
+  <li>Double-click on <b>MDAC_TYP_27.EXE</b> file and install it.</li>
+</ul>
+
+<hr size="1">
+
+<p><a name="Q08"><i><b><font color="#000080">Q: I can't see the 
+online help&nbsp;!</font></b></i></a></p>
+
+<p>The online help uses the new HTML help system from Microsoft 
+Corporation. If you can't see it, it can be due to a wrong installation of the 
+HTML help system.</p>
+
+<p>You can resolve this by installing the help system upgrade,
+<b>Hhupd.exe</b>, provided on the CD:</p>
+
+<ul>
+  <li>Insert the eMedia installation CD in your drive.</li>
+  <li>With your Windows Explorer, browse the &quot;<b>\eMedia\Support</b>&quot;
+    folder.</li>
+  <li>Double-click on <b>HHUPD.EXE</b> file and install it.</li>
+</ul>
+
+<p>If this doesn't correct your problem, please contact 
+the eMedia support team: <a href="mailto:support@emedia-cards.com">support@emedia-cards.com</a>.</p>
+
+<hr size="1">
+
+<p><a name="Q09"><i><b><font color="#000080">Q: Errors 1931 on hhctrl.ocx or hh.exe</font></b></i></a></p>
+
+<p>This error can be fired by the product installation if these 
+files are reserved by the Operating System. Discard these errors and continue 
+installation. If you can't see the online help during program execution, please 
+refer to the <a href="#Q08">question above</a>.</p>
+
+<hr size="1">
+
+<p><a name="Q00"><i><b><font color="#000080">Q: All the answers above can't apply to me. I still have problems.</font></b></i></a></p>
+
+<p>R: There are three ways to install eMedia manually:</p>
+
+<ul>
+  <li>You can use the verbose version of Setup.exe to help you to find where the
+    problem is located,</li>
+  <li>You can install the packages by yourself,</li>
+  <li>You can install all the files manually.</li>
+</ul>
+<p><b>1. Using the verbose version of <font face="Courier New">Setup.exe</font></b></p>
+<ul>
+  <li>Copy the <font face="Courier New">\eMedia</font> folder and all its subfolders from the
+    installation CD into a blank directory of your hard drive.</li>
+  <li>Delete the <font face="Courier New">Setup.exe</font> file in your target folder.</li>
+  <li>Rename the <font face="Courier New">Setup.dat</font> file and call it <font face="Courier New">Setup.exe</font></li>
+  <li>Launch the <font face="Courier New">Setup.exe</font> program. This
+    installation program is identical to the one provided, but displays messages
+    about what it is doing. If errors occurs, the corresponding messages are
+    displayed.</li>
+</ul>
+<p><b>2. Install the packages by yourself</b></p>
+
+<ul>
+  <li> DCOM manual installation: you will find in the <font face="Courier New">eMedia\Win9x</font>
+    directory of the CD the files <b> DCOM95.EXE</b> and <b>DCOM98.EXE</b>. Launch
+    <b> DCOM95.EXE</b> if
+    you have a Windows 95™ operating system. Launch <b> DCOM98.EXE</b> if you have a
+    Windows 98™, or Windows 98SE™ operating system. Check for the error messages that could
+    appear, and then contact the Microsoft support. If the installer ask you to
+    reboot at the end of the process, restart your computer. If your computer
+    runs Windows ME, Windows NT 4 or Windows 2000 operating systems, do not
+    install DCOM.</li>
+  <li> MDAC manual installation: you will find in the <font face="Courier New">eMedia\Common</font>
+    directory of the CD the file <b>MDAC_TYP.EXE</b>. Launch this program and check for
+    the error messages that could appear, and then contact the Microsoft
+    support. If the installer ask you to reboot at the end of the process,
+    restart your computer.</li>
+  <li>Install Microsoft Windows Installer™ manually. You will find in the <font face="Courier New">
+  eMedia\Setup</font> folder of the CD the files <b>INSTMSIA.EXE</b>. and<b> 
+  INSTMSIW.EXE</b>.<b> </b>Launch <b>INSTMSIA.EXE</b> if your computer runs Windows 95™, Windows 98™,
+    Windows 98SE™ or Windows ME™ operating systems, and <b>INSTMSIW.EXE</b>if your computer runs 
+    Windows NT4™, Windows 2000™ or Windows XP™ operating systems. Check for the error messages that 
+    could appear and contact the Microsoft support.</li>
+  <li>If you plan to use DirectShot, install the support files manually. You will find in the 
+    <font face="Courier New">eMedia\DirectShot</font> directory of the CD the file 
+    <b>DCGenAX.exe</b>. Launch this file and follow the instructions. Check for the error messages 
+    that could appear and contact the eMedia support team.</li>
+</ul>
+
+<ul>
+  <li> eMedia manual installation: you will find in the <font face="Courier New">eMedia\Setup</font>
+    folder of the CD the file <b>Setup.exe</b>. Double-click on this file to install the software. 
+    Check for the error messages that could appear then contact the eMedia support team.</li>
+</ul>
+<p><b>3. Installing the files manually</b></p>
+
+<ul>
+  <li>You can contact us for the description of a flat installation of eMedia: 
+    <a href="mailto:support@emedia-cards.com">support@emedia-cards.com</a>.</li>
+</ul>
+<p>&nbsp;</p>
+<p>If no problem seems to appear but the installation fails, please contact the
+eMedia support team: <a href="mailto:support@emedia-cards.com">support@emedia-cards.com</a>.</p>
+
+<hr size="1">
+
+</body>
+</html>

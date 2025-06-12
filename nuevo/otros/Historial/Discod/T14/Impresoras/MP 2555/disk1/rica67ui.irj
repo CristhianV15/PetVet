@@ -1,0 +1,350 @@
+{
+
+	"common" :
+	{
+
+		"root" :
+		{
+			"SoftwareID"				: [ "0000000700000627",		"REG_SZ" ],
+			"Logging"								: [ "1",					"REG_DWORD" ]
+		},
+
+		"common_scope" :
+		{
+			"DriverProductVersion"		: [ "1.4.0.0",		"REG_SZ" ],
+			"Date"				: [ "03/31/2020",	"REG_SZ" ],
+			"PrinterModelName"		: [ "MP 2555",	"REG_SZ" ],
+			"PDL"						: [ "PCLXL",				"REG_SZ" ]
+		},
+
+		"ui_scope" :
+		{
+		},
+
+		"gr_scope" :
+		{
+		},
+
+		"capsdb_scope" :
+		{
+		}
+
+	},
+
+       "Gestetner MP 2555 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 2555", "REG_SZ" ]
+               }
+       },
+       "Gestetner MP 3055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3055", "REG_SZ" ]
+               }
+       },
+       "Gestetner MP 3555 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3555", "REG_SZ" ]
+               }
+       },
+       "Gestetner MP 4055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 4055", "REG_SZ" ]
+               }
+       },
+       "Gestetner MP 5055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 5055", "REG_SZ" ]
+               }
+       },
+       "Gestetner MP 6055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 6055", "REG_SZ" ]
+               }
+       },
+       "Gestetner DSm 2625 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "DSm 2625", "REG_SZ" ]
+               }
+       },
+       "Gestetner DSm 2630 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "DSm 2630", "REG_SZ" ]
+               }
+       },
+       "Gestetner DSm 2635 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "DSm 2635", "REG_SZ" ]
+               }
+       },
+       "Gestetner DSm 2640 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "DSm 2640", "REG_SZ" ]
+               }
+       },
+       "Gestetner DSm 2650 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "DSm 2650", "REG_SZ" ]
+               }
+       },
+       "Gestetner DSm 2660 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "DSm 2660", "REG_SZ" ]
+               }
+       },
+"infotec MP 2555 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 2555", "REG_SZ" ]
+               }
+       },
+       "infotec MP 3055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3055", "REG_SZ" ]
+               }
+       },
+       "infotec MP 3555 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3555", "REG_SZ" ]
+               }
+       },
+       "infotec MP 4055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 4055", "REG_SZ" ]
+               }
+       },
+       "infotec MP 5055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 5055", "REG_SZ" ]
+               }
+       },
+       "infotec MP 6055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 6055", "REG_SZ" ]
+               }
+       },
+"LANIER MP 2555 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 2555", "REG_SZ" ]
+               }
+       },
+       "LANIER MP 3055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3055", "REG_SZ" ]
+               }
+       },
+       "LANIER MP 3555 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3555", "REG_SZ" ]
+               }
+       },
+       "LANIER MP 4055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 4055", "REG_SZ" ]
+               }
+       },
+       "LANIER MP 5055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 5055", "REG_SZ" ]
+               }
+       },
+       "LANIER MP 6055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 6055", "REG_SZ" ]
+               }
+       },
+"NRG MP 2555 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 2555", "REG_SZ" ]
+               }
+       },
+       "NRG MP 3055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3055", "REG_SZ" ]
+               }
+       },
+       "NRG MP 3555 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3555", "REG_SZ" ]
+               }
+       },
+       "NRG MP 4055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 4055", "REG_SZ" ]
+               }
+       },
+       "NRG MP 5055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 5055", "REG_SZ" ]
+               }
+       },
+       "NRG MP 6055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 6055", "REG_SZ" ]
+               }
+       },
+"RICOH MP 2555 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 2555", "REG_SZ" ]
+               }
+       },
+       "RICOH MP 3055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3055", "REG_SZ" ]
+               }
+       },
+       "RICOH MP 3555 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3555", "REG_SZ" ]
+               }
+       },
+       "RICOH MP 4055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 4055", "REG_SZ" ]
+               }
+       },
+       "RICOH MP 5055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 5055", "REG_SZ" ]
+               }
+       },
+       "RICOH MP 6055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 6055", "REG_SZ" ]
+               }
+       },
+       "RICOH MP 2595J PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 2595J", "REG_SZ" ]
+               }
+       },
+       "RICOH MP 3095J PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3095J", "REG_SZ" ]
+               }
+       },
+       "RICOH MP 3595J PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3595J", "REG_SZ" ]
+               }
+       },
+"SAVIN MP 2555 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 2555", "REG_SZ" ]
+               }
+       },
+       "SAVIN MP 3055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3055", "REG_SZ" ]
+               }
+       },
+       "SAVIN MP 3555 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 3555", "REG_SZ" ]
+               }
+       },
+       "SAVIN MP 4055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 4055", "REG_SZ" ]
+               }
+       },
+       "SAVIN MP 5055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 5055", "REG_SZ" ]
+               }
+       },
+       "SAVIN MP 6055 PCL 6" :
+       {
+               "common_scope" :
+               {
+                       "PrinterModelName"              : [ "MP 6055", "REG_SZ" ]
+               }
+       }
+ 
+}
