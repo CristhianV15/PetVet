@@ -1,0 +1,49 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>File Upload Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class=" container">
+            <br />
+            <h1>File Upload Example</h1>
+            <br />
+            <div class="form-row">
+                <div class="col">
+                    <asp:DropDownList id="ddlEmployees" runat="server" CssClass="form-control dropdown">
+                        <asp:ListItem value="0">-- Select Employee --</asp:ListItem>
+                        <asp:ListItem value="1">Nikunj Satasiya</asp:ListItem>
+                        <asp:ListItem value="2">Hiren Dobariya</asp:ListItem>
+                        <asp:ListItem value="3">Vivek Ghadiya</asp:ListItem>
+                        <asp:ListItem value="3">Shreya Patel</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+                <div class="col">
+                    <asp:TextBox ID="txtDocument" runat="server" CssClass="form-control" placeholder="DocumentName"></asp:TextBox>
+                </div>
+
+            </div>
+            <br />
+            <div class=" row">
+                <asp:FileUpload ID="FileUploadEmployees" runat="server" CssClass="btn" />
+            </div>
+            <br />
+            <asp:Button ID="btnUploadFile" runat="server" Text="Upload" CssClass="btn btn-primary" OnClick="btnUploadFile_click" />
+            <hr />
+            <asp:GridView ID="grdEmployees" runat="server" Width="100%" CssClass="table table-bordered" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="FileID " Visible="false" HeaderText="FileID " />
+                    <asp:BoundField DataField="EmployeeName" HeaderText="EmployeeName" />
+                    <asp:BoundField DataField="DocumentName" HeaderText="DocumentName" />
+                    <asp:BoundField DataField="FileName" HeaderText="FileName" />
+                    <asp:BoundField DataField="FileData" HeaderText="FileData" />
+                </Columns>
+            </asp:GridView>
+        </div>
+    </form>
+</body>
+</html>    

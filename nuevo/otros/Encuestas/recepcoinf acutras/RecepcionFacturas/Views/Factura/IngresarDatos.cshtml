@@ -1,0 +1,139 @@
+﻿@using System.Web.Mvc
+@model RecepcionFacturas.Models.FacturaViewModel
+
+@{
+    ViewBag.Title = "Ingresar Datos de Factura";
+}
+
+<div class="container">
+    <h2>Ingresar Datos de Factura</h2>
+    @using (Html.BeginForm("IngresarDatos", "Factura", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NumeroFactura)
+                    @Html.EditorFor(model => model.NumeroFactura, new { htmlAttributes = new { @class = "form-control", placeholder = "Número de Factura" } })
+                    @Html.ValidationMessageFor(model => model.NumeroFactura, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FechaEmision)
+                    @Html.TextBoxFor(model => model.FechaEmision, new { @class = "form-control", type = "date" })
+                    @Html.ValidationMessageFor(model => model.FechaEmision, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FechaVencimiento)
+                    @Html.TextBoxFor(model => model.FechaVencimiento, new { @class = "form-control", type = "date" })
+                    @Html.ValidationMessageFor(model => model.FechaVencimiento, "", new { @class = "text-danger" })
+                </div>
+                @*<div class="form-group">
+            @Html.LabelFor(model => model.Moneda)
+            @Html.EditorFor(model => model.Moneda, new { htmlAttributes = new { @class = "form-control", placeholder = "Moneda" } })
+            @Html.ValidationMessageFor(model => model.Moneda, "", new { @class = "text-danger" })
+        </div>*@
+
+
+
+                @*<div class="form-group">
+                    @Html.LabelFor(model => model.IdMoneda)
+                    @Html.DropDownListFor(model => model.IdMoneda, (IEnumerable<SelectListItem>)ViewBag.Monedas, "Seleccione una moneda", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.IdMoneda, "", new { @class = "text-danger" })
+        </div>*@
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IdMoneda)
+                    @Html.DropDownListFor(model => model.IdMoneda, (IEnumerable<SelectListItem>)ViewBag.Monedas, "Seleccione una moneda", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.IdMoneda, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ImporteTotal)
+                    @Html.EditorFor(model => model.ImporteTotal, new { htmlAttributes = new { @class = "form-control", placeholder = "Importe Total" } })
+                    @Html.ValidationMessageFor(model => model.ImporteTotal, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.Label("Archivo de Factura")
+                    <input type="file" name="ArchivoFactura" id="ArchivoFactura" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.ArchivoFactura, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.Label("Archivo de Orden de Compra")
+                    <input type="file" name="ArchivoOrden" id="ArchivoOrden" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.ArchivoOrden, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.Label("Archivo de Guía de Remisión")
+                    <input type="file" name="ArchivoGuia" id="ArchivoGuia" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.ArchivoGuia, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.Label("Archivo de Acta de Conformidad")
+                    <input type="file" name="ArchivoActa" id="ArchivoActa" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.ArchivoActa, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Guardar Datos" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- Modal de Éxito -->
+    <div class="modal fade" id="modalExito" tabindex="-1" role="dialog" aria-labelledby="modalExitoLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modalExitoLabel">Éxito</h4>
+                </div>
+                <div class="modal-body">
+                    @ViewBag.Mensaje
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Error -->
+    <div class="modal fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="modalErrorLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modalErrorLabel">Error</h4>
+                </div>
+                <div class="modal-body">
+                    @ViewBag.Mensaje
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var mensaje = "@ViewBag.Mensaje";
+            if (mensaje !== "") {
+                if (mensaje.startsWith("Datos ingresados correctamente")) {
+                    $('#modalExito').modal('show');
+                } else {
+                    $('#modalError').modal('show');
+                }
+            }
+        });
+    </script>
+}

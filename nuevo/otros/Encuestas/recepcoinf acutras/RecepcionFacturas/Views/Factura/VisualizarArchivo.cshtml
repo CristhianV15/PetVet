@@ -1,0 +1,48 @@
+﻿@using System.Web.Mvc
+@model IEnumerable<RecepcionFacturas.Models.FacturaViewModel>
+
+@{
+    ViewBag.Title = "Visualizar Archivos";
+}
+
+<h2>Archivos Subidos</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Número de Factura</th>
+            <th>Fecha de Emisión</th>
+            <th>Fecha de Vencimiento</th>
+            <th>Moneda</th>
+            <th>Importe Total</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {   
+            foreach (var factura in Model)
+            {
+                <tr>
+                    <td>@factura.IdFactura</td>
+                    <td>@factura.NumeroFactura</td>
+                    <td>@factura.FechaEmision.ToString("yyyy-MM-dd")</td>
+                    <td>@factura.FechaVencimiento.ToString("yyyy-MM-dd")</td>
+                    <td>@factura.Moneda</td>
+                    <td>@factura.ImporteTotal</td>
+                    <td>
+                        @using (Html.BeginForm("DescargarSeleccionados", "Factura", FormMethod.Post))
+                        {
+                            <input type="hidden" name="id" value="@factura.IdFactura" />
+                            <label><input type="checkbox" name="seleccionarFactura" value="true" /> Factura</label>
+                            <label><input type="checkbox" name="seleccionarOrden" value="true" /> Orden</label>
+                            <label><input type="checkbox" name="seleccionarGuiaRemision" value="true" /> Guía de remisión</label>
+                            <label><input type="checkbox" name="seleccionarActaConformidad" value="true" /> Acta de conformidad</label>
+                            <button type="submit" class="btn btn-success">Descargar Seleccionados</button>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

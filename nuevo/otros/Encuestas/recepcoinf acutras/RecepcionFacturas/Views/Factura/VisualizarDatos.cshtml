@@ -1,0 +1,37 @@
+﻿
+
+<h2>VisualizarDatos</h2>
+
+@model List<RecepcionFacturas.Models.FacturaViewModel>
+
+@{
+    ViewBag.Title = "Visualizar Datos";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Ajusta el layout según tu estructura
+}
+
+<div class="container">
+    <h2>Visualizar Datos de Faaaaaaaaaaaaaaaaacturas</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Número de Factura</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var factura in Model)
+            {
+                <tr>
+                    <td>@factura.NumeroFactura</td>
+                    <td>
+                        @Html.ActionLink("Descargar Orden", "DescargarArchivo", new { id = factura.IdFactura, tipo = "Orden" }, new { @class = "btn btn-info btn-sm" })
+                        @Html.ActionLink("Descargar Guía", "DescargarArchivo", new { id = factura.IdFactura, tipo = "Guia" }, new { @class = "btn btn-info btn-sm" })
+                        @Html.ActionLink("Descargar Acta", "DescargarArchivo", new { id = factura.IdFactura, tipo = "Acta" }, new { @class = "btn btn-info btn-sm" })
+                        @Html.ActionLink("Eliminar", "EliminarRegistro", new { id = factura.IdFactura }, new { @class = "btn btn-danger btn-sm", onclick = "return confirm('¿Está seguro de eliminar este registro?');" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
