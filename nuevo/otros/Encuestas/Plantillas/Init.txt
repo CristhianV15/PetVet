@@ -1,0 +1,1 @@
+El estatus diario se envía cuando se solicita la lista de usuarios restante y también al inicio del día a cada gerencia de la encuesta (y sus encargados) con copia a Carlos, Junior y Jimmy

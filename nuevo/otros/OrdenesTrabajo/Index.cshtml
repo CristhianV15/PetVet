@@ -1,0 +1,89 @@
+@model IEnumerable<OrdenTrabajo>
+
+@{
+    ViewBag.Title = "Ordenes de Trabajo"; // Titulo
+    Layout = "~/Views/Home/_Layout.cshtml"; // Llama al layout principal (navbar)
+}
+
+<h2>Órdenes de Trabajo</h2>
+<a asp-action="Crear" class="btn btn-primary mb-3">Nueva Orden</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Orden de Mantenimiento</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>
+            <th>Supervisor</th>
+            <th>Técnico</th>
+            <th>Observaciones</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var orden in Model)
+        {
+            <tr>
+                <td>@orden.Id</td>
+                <td>@orden.OrdenMantenimiento</td>
+                <td>@orden.Descripcion</td>
+                <td>@orden.Estado</td>
+                <td>@orden.FechaInicio.ToString("yyyy-MM-dd")</td>
+                <td>@(orden.FechaFin?.ToString("yyyy-MM-dd") ?? "-")</td>
+                <td>@orden.Supervisor</td>
+                <td>@orden.Tecnico</td>
+                <td>@orden.Observaciones</td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@orden.Id" class="btn btn-warning btn-sm">Editar</a>
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#eliminarModal" onclick="setOrdenTrabajo(@orden.Id, '@orden.OrdenMantenimiento', '@orden.Descripcion', '@orden.Estado')">Eliminar</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="eliminarModal" tabindex="-1" role="dialog" aria-labelledby="eliminarModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eliminarModalLabel">Eliminar Orden de Trabajo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de que deseas eliminar esta orden?</p>
+                <table class="table">
+                    <tr><th>ID</th><td id="modalId"></td></tr>
+                    <tr><th>Orden</th><td id="modalOrden"></td></tr>
+                    <tr><th>Descripción</th><td id="modalDescripcion"></td></tr>
+                    <tr><th>Estado</th><td id="modalEstado"></td></tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <form id="eliminarForm" method="post" asp-action="Eliminar">
+                    <input type="hidden" name="id" id="modalIdInput" />
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function setOrdenTrabajo(id, ordenMantenimiento, descripcion, estado) {
+        // Establecer los valores en el modal
+        document.getElementById('modalId').innerText = id;
+        document.getElementById('modalOrden').innerText = ordenMantenimiento;
+        document.getElementById('modalDescripcion').innerText = descripcion;
+        document.getElementById('modalEstado').innerText = estado;
+
+        // Establecer el ID en el formulario oculto
+        document.getElementById('modalIdInput').value = id;
+    }
+</script>

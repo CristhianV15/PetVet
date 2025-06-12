@@ -1,0 +1,17 @@
+@model OrdenTrabajo
+
+<h2>Eliminar Orden de Trabajo</h2>
+<p>¿Estás seguro de que deseas eliminar esta orden?</p>
+
+<table class="table">
+    <tr><th>ID</th><td>@Model.Id</td></tr>
+    <tr><th>Orden</th><td>@Model.OrdenMantenimiento</td></tr>
+    <tr><th>Descripción</th><td>@Model.Descripcion</td></tr>
+    <tr><th>Estado</th><td>@Model.Estado</td></tr>
+</table>
+
+<form asp-action="Eliminar" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

@@ -1,0 +1,82 @@
+@model OrdenTrabajo
+
+<div class="form-group">
+    <label asp-for="OrdenMantenimiento">Orden de Mantenimiento</label>
+    <input asp-for="OrdenMantenimiento" class="form-control" required />
+</div>
+
+<div class="form-group">
+    <label asp-for="Descripcion">Descripción</label>
+    <textarea asp-for="Descripcion" class="form-control"></textarea>
+</div>
+
+<div class="form-group">
+    <label asp-for="Estado">Estado</label>
+    <select asp-for="Estado" class="form-control">
+        <option value="Pendiente">Pendiente</option>
+        <option value="En Progreso">En Progreso</option>
+        <option value="Completado">Completado</option>
+    </select>
+</div>
+
+
+<div class="form-group">
+    <label asp-for="FechaInicio">Fecha de Inicio</label>
+    <input asp-for="FechaInicio" type="date" class="form-control" required />
+</div>
+
+<div class="form-group">
+    <label asp-for="FechaFin">Fecha de Fin</label>
+    <input asp-for="FechaFin" type="date" class="form-control" />
+</div>
+
+<div class="form-group">
+    <label asp-for="HoraInicio">Hora de Inicio</label>
+    <input asp-for="HoraInicio" type="time" class="form-control" required />
+</div>
+
+<div class="form-group">
+    <label asp-for="HoraFin">Hora de Fin</label>
+    <input asp-for="HoraFin" type="time" class="form-control" />
+</div>
+
+
+<div class="form-group">
+    <label asp-for="Observaciones">Observaciones</label>
+    <textarea asp-for="Observaciones" class="form-control"></textarea>
+</div>
+
+<div class="form-group">
+    <label asp-for="Supervisor">Supervisor</label>
+    <input asp-for="Supervisor" class="form-control" required />
+</div>
+
+<div class="form-group">
+    <label asp-for="Tecnico">Técnico</label>
+    <input asp-for="Tecnico" class="form-control" required />
+</div>
+
+
+
+<!--Script para obtener fecha del sistema -->
+
+ <script> document.addEventListener("DOMContentLoaded", function() { 
+    var today = new Date().toISOString().split('T')[0]; // Fecha en formato YYYY-MM-DD
+     document.querySelector('input[name="FechaInicio"]').value = today; // FechaInicio 
+     document.querySelector('input[name="FechaFin"]').value = today; // Fecha final }); 
+     </script>
+
+<!--Script para obtener la hora del sistema -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var ahora = new Date();
+        var hora = String(ahora.getHours()).padStart(2, '0'); // Formatear horas obtenidas 
+        var minutos = String(ahora.getMinutes()).padStart(2, '0'); // Formatear minutos obtenidos
+        var tiempoActual = hora + ':' + minutos; // Formato HH:MM
+
+        document.querySelector('input[name="HoraInicio"]').value = tiempoActual; // Hora de inicio en input asp-for
+        document.querySelector('input[name="HoraFin"]').value = tiempoActual; // Hora fin en input asp-for
+    });
+</script>
+
+
