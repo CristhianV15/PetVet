@@ -1,0 +1,570 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        .bg-color-notification-card {
+            background-color: #F8F9F9;
+        }
+
+        .text-color-notification-header {
+            color: white;
+        }
+
+        .height-notification-card {
+            height: 110px;
+        }
+
+        .border-none {
+            border: none;
+        }
+
+        .color-icon-notification {
+            color: red;
+        }
+
+        .shadow-card {
+            box-shadow: 0px 0px 10px #888888;
+        }
+
+        .text-color-remanente {
+            color: #4E73DF;
+        }
+
+        .hidden-value {
+            display: none;
+        }
+
+        .icon-size {
+            font-size: 20px;
+        }
+
+        .view-btn {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .height-grafico-card {
+            height: 300px;
+        }
+
+        .disabled {
+            pointer-events: none;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="~/imagenes/neumaticos.png">
+</head>
+<!-- Page Heading -->
+
+<div class="row">
+        <div class="card shadow-card col mr-1">
+            <div class="card-body bg-color-notification-card height-notification-card">
+                <div class="notification-card">
+                    <div class="body">
+                        <ul>
+                            <li class="notification color-icon-notification">
+                                <div class="text">
+                                    <small class="text-color-remanente h5">Sin llantas para cambio o reencauche</small>
+                                    <small class="text-color-remanente h5 hidden-value" id="div_Notificaciones">0</small>
+                                </div>
+                                <div class="view-btn">
+                                    <a class="view-link" href="@Url.Action("Estadollanta", "Almacen")">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <i class="icon fas fa-bell color-icon-notification icon-size disabled"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+    <div class="row" style="margin-top:25px">
+    </div>
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Total LLantas Activas
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="div_Llantas">0</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa fa-compass fa-2x text-black-50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Total Bitrenes Activos
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="div_Vehiculos">0</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa fa-truck fa-2x text-black-50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                Total Equipos Activos
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="div_Bitrenes">0</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa fa-train fa-2x text-black-50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pending Requests Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                Total Inspecciones ultimos 3 meses
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="div_Reencauche">0</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa fa-list-alt fa-2x text-black-50"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top:10px">
+    </div>
+
+    <div class="row" style="margin-top:20px">
+
+        <div class="col-lg-4">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <div class="panel-heading"><b>Reporte por Marcas</b> </div>
+            </div>
+
+            <div class="card border-left-danger shadow py-2 height-grafico-card">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <canvas id="myPieChart" width="100" height="50"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <div class="panel-heading"><b>Reporte Remanentes</b> </div>
+            </div>
+
+            <div class="card border-left-primary shadow py-2 height-grafico-card">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <canvas id="myBarChart" width="100" height="50"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <div class="panel-heading"><b>Reporte por Fallas</b> </div>
+            </div>
+
+            <div class="card border-left-success shadow py-2 height-grafico-card">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <canvas id="myBarChart1" width="100" height="50"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*<div class="row" style="margin-top:20px">
+            <div class="col-lg-4">
+
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Reporte por Marca</h1>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="tabla" style="width:100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>[Marca]</th>
+                                    <th>[Modelo]</th>
+                                    <th>[Cantidad]</th>
+                                    <th>[%]</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>*@
+
+    @section scripts{
+        <script>
+
+        var tabladata;
+
+        $(document).ready(function () {
+
+            jQuery.ajax({
+                url: '@Url.Action("ListarAlmacenTaller", "Almacen")',
+                type: "GET",
+                data: null,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    if (data.data != null) {
+                        $("#div_Llantas").text(data.data.length)
+
+                    } else {
+                        $("#div_Llantas").text("0");
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                beforeSend: function () {
+
+                },
+            });
+
+            jQuery.ajax({
+                url: '@Url.Action("ListarVehiculos", "Neumatico")',
+                type: "GET",
+                data: null,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    if (data.data != null) {
+                        $("#div_Vehiculos").text(data.data.length)
+
+                    } else {
+                        $("#div_Vehiculos").text("0");
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                beforeSend: function () {
+
+                },
+            });
+
+            jQuery.ajax({
+                url: '@Url.Action("ListarVehiculodet", "Neumatico")',
+                type: "GET",
+                data: null,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    if (data.data != null) {
+                        $("#div_Bitrenes").text(data.data.length)
+
+                    } else {
+                        $("#div_Bitrenes").text("0");
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                beforeSend: function () {
+
+                },
+            });
+
+            jQuery.ajax({
+                url: '@Url.Action("ListarReencauche", "Registro")',
+                type: "GET",
+                data: null,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    if (data.data != null) {
+                        $("#div_Reencauche").text(data.data.length)
+
+                    } else {
+                        $("#div_Reencauche").text("0");
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                beforeSend: function () {
+
+                },
+            });
+
+
+            //para las notificaciones
+
+            jQuery.ajax({
+                url: '@Url.Action("ListarNotificaciones", "Registro")',
+                type: "GET",
+                data: null,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    if (data.data != null) {
+                        /*$("#div_Notificaciones").text(data.data.length)*/
+
+                        var cantidad = data.data.length;
+                        $("#div_Notificaciones").text(cantidad);
+                        $("#div_Notificaciones").prev().text("Tienes " + $("#div_Notificaciones").text() + " llantas para cambio o reencauche");
+
+                    } else {
+                        $("#div_Notificaciones").text("0");
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                beforeSend: function () {
+
+                },
+            });
+
+        });
+
+        jQuery.ajax({
+                url: '@Url.Action("ReporteRemanentes", "Registro")',
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    /*console.log(data);*/
+
+                    var arrayRemanentes = [];
+                    var arrayCantidad = [];
+
+                    for (var i = 0; i < data.length; i++) {
+
+                        /*console.log(data[i].remanentes)*/
+                        arrayRemanentes.push(data[i].remanentes)
+                        arrayCantidad.push(data[i].cantidad)
+                    }
+
+                    console.log(arrayRemanentes)
+                    console.log(arrayCantidad)
+
+                    var controlBar1 = document.getElementById("myBarChart");
+
+                    var graficoBar1 = new Chart(controlBar1, {
+                        type: 'bar',
+                        data: {
+                            labels: arrayRemanentes,
+                            datasets: [{
+                                label: "Estado de remanentes",
+                                backgroundColor: ["#FF6687", "#37AFFF", "#FFCE5D", "#607D8B", "#8D54FF", "#FF9830", "#4BC0C0", "#2ECC71", "#C70039", "#FFDAB9", "#A0A7EB"],
+                                borderColor: "#000000",
+                                borderWidth: 0,
+                                data: arrayCantidad,
+                            }],
+                        },
+                        options: {
+                            scales: {
+                                xAxes: [{
+                                    gridLines: {
+                                        display: true
+                                    },
+                                }],
+                                yAxes: [{
+                                    ticks: {
+                                        min: 0,
+                                    },
+                                    gridLines: {
+                                        display: true
+                                    }
+                                }],
+                            },
+
+                            title: {
+                                display: true,
+                                text: "Estado de remanentes" // Título del gráfico
+                            },
+
+                            legend: {
+                                display: false
+                            }
+                        }
+                    });
+
+
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+        }),
+
+            jQuery.ajax({
+                url: '@Url.Action("ReporteporEstado", "Registro")',
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    /*console.log(data);*/
+
+                    var arrayEstado = [];
+                    var arrayCantidad = [];
+
+                    for (var i = 0; i < data.length; i++) {
+
+                        /*console.log(data[i].estadooperacion)*/
+                        arrayEstado.push(data[i].estadooperacion)
+                        arrayCantidad.push(data[i].cantidad)
+                    }
+
+                    console.log(arrayEstado)
+                    console.log(arrayCantidad)
+
+                    var controlBar2 = document.getElementById("myBarChart1").getContext("2d");
+                    var graficoBar2 = new Chart(controlBar2, {
+                        type: 'bar',
+                        data: {
+                            labels: arrayEstado,
+                            datasets: [{
+                                label: "Reporte de fallas",
+                                backgroundColor: ["#FF6687", "#37AFFF", "#FFCE5D", "#607D8B", "#8D54FF", "#FF9830", "#4BC0C0", "#2ECC71", "#C70039", "#FFDAB9", "#A0A7EB"],
+                                borderColor: "#000000",
+                                borderWidth: 0,
+                                data: arrayCantidad,
+                            }],
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            },
+
+                            title: {
+                                display: true,
+                                text: "Reporte de fallas" // Título del gráfico
+                            },
+                            legend: {
+                                display: false // Ocultar la leyenda
+                            },
+                            tooltips: {
+                                enabled: false // Deshabilitar tooltips
+                            }
+                        }
+                    });
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+            }),
+
+        jQuery.ajax({
+                url: '@Url.Action("ReporteporMarcas", "Registro")',
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    /*console.log(data);*/
+
+                    var arrayMarcas = [];
+                    var arrayCantidad = [];
+
+                    for (var i = 0; i < data.length; i++) {
+
+                        /*console.log(data[i].marca)*/
+                        arrayMarcas.push(data[i].marca)
+                        arrayCantidad.push(data[i].cantidad)
+                    }
+
+
+                    var controlPie1 = document.getElementById("myPieChart");
+                    var graficoPie1 = new Chart(controlPie1, {
+                        type: 'pie',
+                        data: {
+                            labels: arrayMarcas,
+                            datasets: [{
+                                data: arrayCantidad,
+                                backgroundColor: ["#FF6687", "#37AFFF", "#FFCE5D", "#607D8B", "#8D54FF", "#FF9830", "#4BC0C0", "#2ECC71", "#C70039", "#FFDAB9", "#A0A7EB", "#117A65", "#784212", "#909497"],
+                            }],
+                        },
+                    });
+
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+        }),
+
+        $(document).ready(function () {
+
+
+                tabladata = $('#tabla').DataTable({
+                    responsive:true,
+                    "ajax": {
+                        "url": '@Url.Action("ReporteMarcas", "Registro")',
+                        "type": "GET",
+                        "datatype": "json"
+                    },
+                    "columns": [
+                        { "data": "marca" },
+                        { "data": "modelo" },
+                        { "data": "cantidad" },
+                        { "data": "porcentaje" },
+                    ],
+                    "language": {
+                        "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
+                    }
+                });
+        })
+
+        </script>
+    }

@@ -1,0 +1,158 @@
+﻿
+@{
+    ViewBag.Title = "Estadollanta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="icon" type="image/png" href="~/imagenes/neumaticos.png">
+</head>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3 bg-primary">
+        <h6 class="m-0 font-weight-bold text-white">Llantas para cambio o reencauche</h6>
+    </div>
+    <div class="card-body">
+
+        <div class="row">
+
+            <div class="card-body p-3">
+
+                <hr class="mt-1 mb-1" />
+                @using (Html.BeginForm("ExportarEstado", "Almacen", FormMethod.Post))
+                {
+                    <div class="form-row align-items-end">
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-block btn-success"><i class="fas fa-file-excel"></i> Exportar a Excel</button>
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="tabla" style="width:100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Alerta</th>
+                                <th>Bitren</th>
+                                <th>Equipo</th>
+                                <th>Posicion</th>
+                                <th>Codigo Llanta</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Medida</th>
+                                <th>Remanente Actual</th>
+                                <th>Almacen</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Alerta</th>
+                                <th>Bitren</th>
+                                <th>Equipo</th>
+                                <th>Posicion</th>
+                                <th>Codigo Llanta</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Medida</th>
+                                <th>Remanente Actual</th>
+                                <th>Almacen</th>
+                                <th>Estado</th>
+                            </tr>
+                        </tfoot>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section scripts{
+
+    <script>
+        var tabladata;
+
+            tabladata = $('#tabla').DataTable({
+                responsive:true,
+                "ajax": {
+                    "url": '@Url.Action("ListarEstadoLlanta", "Almacen")',
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+
+                    {
+                        "data": "alerta", "render": function (data) {
+                            if (data) {
+                                return '<span class="badge badge-success p-2">Buen Estado</span>'
+                            } else {
+                                return '<span class="badge badge-danger p-2">Realizar Cambio</span>'
+                            }
+                        }
+                    },
+
+                    {
+                        "data": "oVehiculo", render: function (data) {
+                            return data.tipo
+                        }
+                    },
+                    {
+                        "data": "oVehiculodet", render: function (data) {
+                            return data.unidad
+                        }
+                    },
+                    { "data": "posicion" },
+                    { "data": "codllanta" },
+                    {
+                        "data": "oMarca", render: function (data) {
+                            return data.marca
+                        }
+                    },
+                    {
+                        "data": "oModelo", render: function (data) {
+                            return data.modelo
+                        }
+                    },
+                    {
+                        "data": "oMedida", render: function (data) {
+                            return data.medida
+                        }
+                    },
+                    { "data": "remanente" },
+                    {
+                        "data": "oAlmacen", render: function (data) {
+                            return data.almacen
+                        }
+                    },
+                    {
+                        "data": "estado", "render": function (data) {
+                            if (data) {
+                                return '<span class="badge badge-success p-2">Activo</span>'
+                            } else {
+                                return '<span class="badge badge-danger p-2">No Activo</span>'
+                            }
+                        }
+                    }
+                ],
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
+                }
+            });
+
+    </script>
+
+}

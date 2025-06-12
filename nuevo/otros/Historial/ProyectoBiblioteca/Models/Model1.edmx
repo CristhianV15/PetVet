@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_NEUMATICOSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="LLANTA">
+          <Key>
+            <PropertyRef Name="idllanta" />
+          </Key>
+          <Property Name="idllanta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id" Type="int" />
+          <Property Name="iddet" Type="int" />
+          <Property Name="codllanta" Type="varchar" MaxLength="30" />
+          <Property Name="idmarca" Type="int" />
+          <Property Name="idmodelo" Type="int" />
+          <Property Name="idmedida" Type="int" />
+          <Property Name="remanenteoriginal" Type="int" />
+          <Property Name="remanentereencauche" Type="int" />
+          <Property Name="remanente" Type="int" />
+          <Property Name="posicion" Type="int" />
+          <Property Name="kminstalacion" Type="int" />
+          <Property Name="nroreencauche" Type="int" />
+          <Property Name="idalmacen" Type="int" />
+          <Property Name="estado" Type="bit" />
+          <Property Name="fechacreacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="REMANENTE">
+          <Key>
+            <PropertyRef Name="idremanente" />
+          </Key>
+          <Property Name="idremanente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="codllanta" Type="varchar" MaxLength="30" />
+          <Property Name="fechainspeccion" Type="varchar" MaxLength="10" />
+          <Property Name="kminspeccion" Type="int" />
+          <Property Name="remanenteactual" Type="int" />
+          <Property Name="estadooperacion" Type="varchar" MaxLength="100" />
+          <Property Name="observaciones" Type="varchar" MaxLength="100" />
+          <Property Name="estado" Type="bit" />
+          <Property Name="fechacreacion" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="DB_NEUMATICOSModelStoreContainer">
+          <EntitySet Name="LLANTA" EntityType="Self.LLANTA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REMANENTE" EntityType="Self.REMANENTE" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_NEUMATICOSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="REMANENTE">
+          <Key>
+            <PropertyRef Name="idremanente" />
+          </Key>
+          <Property Name="idremanente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="codllanta" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="fechainspeccion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="kminspeccion" Type="Int32" />
+          <Property Name="remanenteactual" Type="Int32" />
+          <Property Name="estadooperacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="estado" Type="Boolean" />
+          <Property Name="fechacreacion" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="DB_NEUMATICOSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="REMANENTE" EntityType="Self.REMANENTE" />
+          <EntitySet Name="LLANTA" EntityType="DB_NEUMATICOSModel.LLANTA" />
+        </EntityContainer>
+        <EntityType Name="LLANTA">
+          <Key>
+            <PropertyRef Name="idllanta" />
+          </Key>
+          <Property Name="idllanta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int32" />
+          <Property Name="iddet" Type="Int32" />
+          <Property Name="codllanta" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="idmarca" Type="Int32" />
+          <Property Name="idmodelo" Type="Int32" />
+          <Property Name="idmedida" Type="Int32" />
+          <Property Name="remanente" Type="Int32" />
+          <Property Name="posicion" Type="Int32" />
+          <Property Name="kminstalacion" Type="Int32" />
+          <Property Name="nroreencauche" Type="Int32" />
+          <Property Name="idalmacen" Type="Int32" />
+          <Property Name="estado" Type="Boolean" />
+          <Property Name="fechacreacion" Type="DateTime" Precision="3" />
+          <Property Name="remanenteoriginal" Type="Int32" />
+          <Property Name="remanentereencauche" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_NEUMATICOSModelStoreContainer" CdmEntityContainer="DB_NEUMATICOSEntities">
+          <EntitySetMapping Name="REMANENTE">
+            <EntityTypeMapping TypeName="DB_NEUMATICOSModel.REMANENTE">
+              <MappingFragment StoreEntitySet="REMANENTE">
+                <ScalarProperty Name="idremanente" ColumnName="idremanente" />
+                <ScalarProperty Name="codllanta" ColumnName="codllanta" />
+                <ScalarProperty Name="fechainspeccion" ColumnName="fechainspeccion" />
+                <ScalarProperty Name="kminspeccion" ColumnName="kminspeccion" />
+                <ScalarProperty Name="remanenteactual" ColumnName="remanenteactual" />
+                <ScalarProperty Name="estadooperacion" ColumnName="estadooperacion" />
+                <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="fechacreacion" ColumnName="fechacreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LLANTA">
+            <EntityTypeMapping TypeName="DB_NEUMATICOSModel.LLANTA">
+              <MappingFragment StoreEntitySet="LLANTA">
+                <ScalarProperty Name="remanentereencauche" ColumnName="remanentereencauche" />
+                <ScalarProperty Name="remanenteoriginal" ColumnName="remanenteoriginal" />
+                <ScalarProperty Name="fechacreacion" ColumnName="fechacreacion" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="idalmacen" ColumnName="idalmacen" />
+                <ScalarProperty Name="nroreencauche" ColumnName="nroreencauche" />
+                <ScalarProperty Name="kminstalacion" ColumnName="kminstalacion" />
+                <ScalarProperty Name="posicion" ColumnName="posicion" />
+                <ScalarProperty Name="remanente" ColumnName="remanente" />
+                <ScalarProperty Name="idmedida" ColumnName="idmedida" />
+                <ScalarProperty Name="idmodelo" ColumnName="idmodelo" />
+                <ScalarProperty Name="idmarca" ColumnName="idmarca" />
+                <ScalarProperty Name="codllanta" ColumnName="codllanta" />
+                <ScalarProperty Name="iddet" ColumnName="iddet" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idllanta" ColumnName="idllanta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

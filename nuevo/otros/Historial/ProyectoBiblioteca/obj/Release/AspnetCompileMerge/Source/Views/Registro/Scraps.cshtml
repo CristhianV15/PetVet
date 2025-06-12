@@ -1,0 +1,431 @@
+﻿
+@{
+    ViewBag.Title = "Scraps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="icon" type="image/png" href="~/imagenes/neumaticos.png">
+</head>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3 bg-primary">
+        <h6 class="m-0 font-weight-bold text-white">Lista de Llantas para enviar a Scraps</h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            @*<div class="col-sm-12">
+                <button class="btn btn-success btn-sm" type="button" onclick="abrirModal(null)">Crear Nuevo</button>
+            </div>*@
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="tabla" style="width:100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Bitren</th>
+                                <th>Equipo</th>
+                                <th>Codigo Llanta</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Medida</th>
+                                <th>Remanente</th>
+                                <th>Estado</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Bitren</th>
+                                <th>Equipo</th>
+                                <th>Codigo Llanta</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Medida</th>
+                                <th>Remanente</th>
+                                <th>Estado</th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="FormModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Registro de Scraps</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input id="txtidllanta" type="hidden" value="0" />
+                <form id="formNivel">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <img id="imgscraps" height="192" width="190" class="border border-dark" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control-file" type="file" id="filescraps" onchange="readURL(this);">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="cbovehiculo">Bitren:</label>
+                                <select id="cbovehiculo" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cbovehiculodet">Equipo:</label>
+                                <select id="cbovehiculodet" class="form-control"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtcodllanta">Codigo llanta:</label>
+                                <input type="text" class="form-control required" id="txtcodllanta" name="codllanta" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="cbomarca">Marca:</label>
+                                <select id="cbomarca" class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="cbomodelo">Modelo:</label>
+                                <select id="cbomodelo" class="form-control"></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="cbomedida">Medida:</label>
+                                <select id="cbomedida" class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="txtremanente">Remanente:</label>
+                                <input type="text" class="form-control required" id="txtremanente" name="remanente" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="txtobservaciones">Observaciones:</label>
+                                <input type="text" class="form-control required" id="txtobservaciones" name="observaciones" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="cboestado">Estado:</label>
+                                <select id="cboestado" class="form-control">
+                                    <option value="1">Activo</option>
+                                    <option value="0">No Activo</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="Guardar()">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+
+    <script>
+        var tabladata;
+
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#imgscraps')
+                            .attr('src', e.target.result)
+                            .width(190)
+                            .height(192);
+                    };
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+        $(document).ready(function () {
+
+            jQuery.ajax({
+                url: '@Url.Action("ListarVehiculos", "Neumatico")',
+                type: "GET",
+                data: null,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    $.each(data.data, function (index, value) {
+                        $("<option>").attr({ "value": value.id }).text(value.tipo).appendTo("#cbovehiculo");
+                    });
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+            });
+
+            jQuery.ajax({
+                url: '@Url.Action("ListarVehiculodet", "Neumatico")',
+                type: "GET",
+                data: null,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    $.each(data.data, function (index, value) {
+                        $("<option>").attr({ "value": value.iddet }).text(value.unidad).appendTo("#cbovehiculodet");
+                    });
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+            });
+
+            jQuery.ajax({
+                url: '@Url.Action("ListarMarca", "Neumatico")',
+                type: "GET",
+                data: null,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    $.each(data.data, function (index, value) {
+                        $("<option>").attr({ "value": value.idmarca }).text(value.marca).appendTo("#cbomarca");
+                    });
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+            });
+
+            jQuery.ajax({
+                url: '@Url.Action("ListarModelo", "Neumatico")',
+                type: "GET",
+                data: null,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    $.each(data.data, function (index, value) {
+                        $("<option>").attr({ "value": value.idmodelo }).text(value.modelo).appendTo("#cbomodelo");
+                    });
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+            });
+
+            jQuery.ajax({
+                url: '@Url.Action("ListarMedida", "Neumatico")',
+                type: "GET",
+                data: null,
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    $.each(data.data, function (index, value) {
+                        $("<option>").attr({ "value": value.idmedida }).text(value.medida).appendTo("#cbomedida");
+                    });
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+            });
+
+                tabladata = $('#tabla').DataTable({
+                    responsive:true,
+                    "ajax": {
+                        "url": '@Url.Action("ListarScraps", "Registro")',
+                        "type": "GET",
+                        "datatype": "json"
+                    },
+                    "columns": [
+                        {
+                            "data": "oVehiculo", render: function (data) {
+                                return data.tipo
+                            }
+                        },
+                        {
+                            "data": "oVehiculodet", render: function (data) {
+                                return data.unidad
+                            }
+                        },
+                        { "data": "codllanta" },
+                        {
+                            "data": "oMarca", render: function (data) {
+                                return data.marca
+                            }
+                        },
+                        {
+                            "data": "oModelo", render: function (data) {
+                                return data.modelo
+                            }
+                        },
+                        {
+                            "data": "oMedida", render: function (data) {
+                                return data.medida
+                            }
+                        },
+                        { "data": "remanente" },
+                        {
+                            "data": "estado", "render": function (data) {
+                                if (data) {
+                                    return '<span class="badge badge-success p-2">Activo</span>'
+                                } else {
+                                    return '<span class="badge badge-danger p-2">No Activo</span>'
+                                }
+                            }
+                        },
+
+                        {
+                            "data": "idllanta", "render": function (data, type, row, meta) {
+
+                                return $("<button>").addClass("btn btn-primary btn-editar btn-sm").append(
+                                    $("<i>").addClass("fas fa-external-link-alt")
+                                ).attr({ "data-informacion": JSON.stringify(row) })[0].outerHTML
+                                ;
+
+                            },
+                            "orderable": false,
+                            "searchable": false,
+                            "width": "90px"
+                        }
+
+                    ],
+                    "language": {
+                        "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
+                    }
+                });
+        });
+
+        $(document).on('click', '.btn-editar', function (event) {
+            var json = $(this).data("informacion")
+
+            abrirModal(json)
+        });
+
+        function abrirModal(json) {
+            
+                $("#txtidllanta").val(json.idllanta); 
+                $("#imgscraps").attr({ "src": "data:image/" + json.extension + ";base64," + json.base64 });
+                $("#cbovehiculo").val(json.oVehiculo.id)
+                $("#cbovehiculo").prop("disabled", true)
+                $("#cbovehiculodet").val(json.oVehiculodet.iddet)
+                $("#cbovehiculodet").prop("disabled", true)
+                $("#txtcodllanta").val(json.codllanta);
+                $("#txtcodllanta").prop("disabled", true)
+                $("#cbomarca").val(json.oMarca.idmarca)
+                $("#cbomarca").prop("disabled", true)
+                $("#cbomodelo").val(json.oModelo.idmodelo)
+                $("#cbomodelo").prop("disabled", true)
+                $("#cbomedida").val(json.oMedida.idmedida)
+                $("#cbomedida").prop("disabled", true)
+                $("#txtremanente").val(json.remanente);
+                $("#txtobservaciones").val(json.observaciones);
+                $("#cboestado").val(json.estado == true ? 1 : 0);
+                $("#cboestado").prop("disabled", true)
+
+            $('#FormModal').modal('show');
+        }
+
+        function Guardar() {
+
+            var ImagenSeleccionada = ($("#filescraps"))[0].files[0];
+
+            var objeto = {
+                idllanta: $("#txtidllanta").val(),
+                oVehiculo: { id: $("#cbovehiculo option:selected").val() },
+                oVehiculodet: { iddet: $("#cbovehiculodet option:selected").val() },
+                codllanta: $("#txtcodllanta").val(),
+                oMarca: { idmarca: $("#cbomarca option:selected").val() },
+                oModelo: { idmodelo: $("#cbomodelo option:selected").val() },
+                oMedida: { idmedida: $("#cbomedida option:selected").val() },
+                remanente: $("#txtremanente").val(),
+                observaciones: $("#txtobservaciones").val(),
+                estado: parseInt($("#cboestado").val()) == 1 ? true : false
+            }
+
+            var request = new FormData();
+            request.append("imagenArchivo", ImagenSeleccionada);
+            request.append("objeto", JSON.stringify(objeto));
+
+            jQuery.ajax({
+                url: '@Url.Action("GuardarScraps", "Registro")',
+                type: "POST",
+                data: request,
+                processData: false,
+                contentType : false,
+                success: function (data) {
+
+                    if (data.resultado) {
+                        tabladata.ajax.reload();
+                        $('#FormModal').modal('hide');
+                        swal("Mensaje", "Neumatico enviado a Scraps", "success")
+                    } else {
+                        swal("Mensaje", "No se pudo guardar los cambios", "warning")
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                beforeSend: function () {
+
+                },
+            });
+
+        }
+
+        $.fn.inputFilter = function (inputFilter) {
+            return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function () {
+                if (inputFilter(this.value)) {
+                    this.oldValue = this.value;
+                    this.oldSelectionStart = this.selectionStart;
+                    this.oldSelectionEnd = this.selectionEnd;
+                } else if (this.hasOwnProperty("oldValue")) {
+                    this.value = this.oldValue;
+                    this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                } else {
+                    this.value = "";
+                }
+            });
+        };
+
+        $("#txtremanente").inputFilter(function (value) {
+            return /^-?\d*$/.test(value);
+        });
+
+    </script>
+
+}

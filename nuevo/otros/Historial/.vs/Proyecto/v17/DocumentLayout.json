@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Proyectos\\001_SISTEMA_NEUMATICOS_MVC\\001_SISTEMA_NEUMATICOS_MVC\\Proyecto\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{06E1B554-EC04-4A77-8B1F-BA800347717B}|ProyectoBiblioteca\\ProyectoBiblioteca.csproj|d:\\proyectos\\001_sistema_neumaticos_mvc\\001_sistema_neumaticos_mvc\\proyecto\\proyectobiblioteca\\js\\sb-admin-2.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{06E1B554-EC04-4A77-8B1F-BA800347717B}|ProyectoBiblioteca\\ProyectoBiblioteca.csproj|solutionrelative:proyectobiblioteca\\js\\sb-admin-2.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06E1B554-EC04-4A77-8B1F-BA800347717B}|ProyectoBiblioteca\\ProyectoBiblioteca.csproj|D:\\Proyectos\\001_SISTEMA_NEUMATICOS_MVC\\001_SISTEMA_NEUMATICOS_MVC\\Proyecto\\proyectobiblioteca\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06E1B554-EC04-4A77-8B1F-BA800347717B}|ProyectoBiblioteca\\ProyectoBiblioteca.csproj|solutionrelative:proyectobiblioteca\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06E1B554-EC04-4A77-8B1F-BA800347717B}|ProyectoBiblioteca\\ProyectoBiblioteca.csproj|D:\\Proyectos\\001_SISTEMA_NEUMATICOS_MVC\\001_SISTEMA_NEUMATICOS_MVC\\Proyecto\\proyectobiblioteca\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06E1B554-EC04-4A77-8B1F-BA800347717B}|ProyectoBiblioteca\\ProyectoBiblioteca.csproj|solutionrelative:proyectobiblioteca\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06E1B554-EC04-4A77-8B1F-BA800347717B}|ProyectoBiblioteca\\ProyectoBiblioteca.csproj|D:\\Proyectos\\001_SISTEMA_NEUMATICOS_MVC\\001_SISTEMA_NEUMATICOS_MVC\\Proyecto\\proyectobiblioteca\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{06E1B554-EC04-4A77-8B1F-BA800347717B}|ProyectoBiblioteca\\ProyectoBiblioteca.csproj|solutionrelative:proyectobiblioteca\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "sb-admin-2.js",
+              "DocumentMoniker": "D:\\Proyectos\\001_SISTEMA_NEUMATICOS_MVC\\001_SISTEMA_NEUMATICOS_MVC\\Proyecto\\ProyectoBiblioteca\\js\\sb-admin-2.js",
+              "RelativeDocumentMoniker": "ProyectoBiblioteca\\js\\sb-admin-2.js",
+              "ToolTip": "D:\\Proyectos\\001_SISTEMA_NEUMATICOS_MVC\\001_SISTEMA_NEUMATICOS_MVC\\Proyecto\\ProyectoBiblioteca\\js\\sb-admin-2.js",
+              "RelativeToolTip": "ProyectoBiblioteca\\js\\sb-admin-2.js",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvzgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-10T18:47:06.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Proyectos\\001_SISTEMA_NEUMATICOS_MVC\\001_SISTEMA_NEUMATICOS_MVC\\Proyecto\\ProyectoBiblioteca\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ProyectoBiblioteca\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Proyectos\\001_SISTEMA_NEUMATICOS_MVC\\001_SISTEMA_NEUMATICOS_MVC\\Proyecto\\ProyectoBiblioteca\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ProyectoBiblioteca\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAANgAAAAAAAAAAAAAAO8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-17T16:24:47.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Proyectos\\001_SISTEMA_NEUMATICOS_MVC\\001_SISTEMA_NEUMATICOS_MVC\\Proyecto\\ProyectoBiblioteca\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProyectoBiblioteca\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "D:\\Proyectos\\001_SISTEMA_NEUMATICOS_MVC\\001_SISTEMA_NEUMATICOS_MVC\\Proyecto\\ProyectoBiblioteca\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "ProyectoBiblioteca\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwCAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-17T15:50:41.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\Proyectos\\001_SISTEMA_NEUMATICOS_MVC\\001_SISTEMA_NEUMATICOS_MVC\\Proyecto\\ProyectoBiblioteca\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "ProyectoBiblioteca\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\Proyectos\\001_SISTEMA_NEUMATICOS_MVC\\001_SISTEMA_NEUMATICOS_MVC\\Proyecto\\ProyectoBiblioteca\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "ProyectoBiblioteca\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-17T15:50:33.028Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

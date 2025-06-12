@@ -1,0 +1,292 @@
+﻿@{
+    ViewBag.Title = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <script src="~/Scripts/SweetAlert/sweetalert.min.js"></script>
+    <link rel="icon" type="image/png" href="~/imagenes/neumaticos.png">
+
+    <style>
+        input[type="submit"] {
+            background-color: #4BC0C0;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            padding: 5px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+        }
+
+            input[type="submit"]:hover {
+                transform: scale(1.2);
+                box-shadow: 0 0 10px grey;
+            }
+    </style>
+
+</head>
+
+<div class="row mt-4">
+    <div class="col-sm-12">
+        <div class="card shadow mb-4">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-10" style="font-size: 1.5em;">
+                        Registrar Inspecciones:
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary btn-sm float-right" onclick="GuardarCambios()">
+                            <i class="fas fa-check" aria-hidden="true"></i> Guardar Cambios
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="cbovehiculo">Bitren</label>
+                            <select id="cbovehiculo" class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label class="bg"></label>
+                            <button type="button" class="btn btn-success btn-block mt-1" id="btnBuscar" onclick="Buscar()">Buscar</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-4">
+                            <div class="form-group">
+                                <div>
+                                    @if (TempData["mensaje"] != null)
+                                    {
+                                        <script>
+                                    swal("¡Éxito!", "@(TempData["mensaje"])", "success");
+                                        </script>
+                                    }
+                                    @using (Html.BeginForm("Import", "Registro", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                    {
+                                        <table>
+                                            <tr>
+                                                <td> Archivo: </td>
+                                                <td> <input type="file" name="UploadedFile" /> </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <input type="submit" name="Submit" value="Importar"/>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    }
+
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="table-responsive">
+                                <table id="tbdata" class="table table-bordered" style="width:100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:0.3%; display:none">Bitren</th>
+                                            <th style="width: 0.3%; font-size: 0.9rem; background-color: #808B96; color: #F8F9F9; border-top-left-radius: 10px; border: none ">Equipo</th>
+                                            <th style="width: 0.1%; font-size: 0.9rem; background-color: #808B96; color: #F8F9F9 ">Cod. Llanta</th>
+                                            <th style="width: 0.4%; font-size: 0.9rem; background-color: #808B96; color: #F8F9F9 ">Marca</th>
+                                            <th style="width: 0.1%; font-size: 0.9rem; background-color: #808B96; color: #F8F9F9 ">Posicion</th>
+                                            <th style="width: 0.1%; font-size: 0.9rem; background-color: #808B96; color: #F8F9F9 ">Remanente Actual</th>
+                                            <th style="width: 0.1%; font-size: 0.9rem; background-color: #808B96; color: #F8F9F9 ">Km Instalacion</th>
+                                            <th style="width: 0.1%; font-size: 0.9rem; background-color: #808B96; color: #F8F9F9 ">Nro Reencauches</th>
+                                            <th style="width: 0.1%; font-size: 0.9rem; background-color: #808B96; color: #F8F9F9 ">Fecha Inspección</th>
+                                            <th style="width: 0.1%; font-size: 0.9rem; background-color: #808B96; color: #F8F9F9 ">Km Inspección</th>
+                                            <th style="width: 0.1%; font-size: 0.9rem; background-color: #808B96; color: #F8F9F9 ">Remanente Insp.</th>
+                                            <th style="width: 0.1%; font-size: 0.9rem; background-color: #808B96; color: #F8F9F9 ">Falla</th>
+                                            <th style="width: 0.1%; font-size: 0.9rem; background-color: #808B96; color: #F8F9F9; border-top-right-radius: 10px; border: none ">Observaciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+@section scripts{
+
+    <script>
+        $(document).ready(function () {
+
+            jQuery.ajax({
+                url: '@Url.Action("ListarVehiculos", "Neumatico")',
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    $("#cbovehiculo").html("");
+                    if (data != null) {
+
+                        $.each(data.data, function (i, item) {
+                            if (item.estado == true) {
+                                $("<option>").attr({ "value": item.id }).text(item.tipo).appendTo("#cbovehiculo");
+                            }
+                        })
+                        $("#cbovehiculo").val($("#cbovehiculo option:first").val());
+
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                beforeSend: function () {
+
+                },
+            });
+
+        })
+
+        function Buscar() {
+
+            var id = parseInt($("#cbovehiculo").val());
+
+            jQuery.ajax({
+                url: '@Url.Action("ListarRemanentes", "Registro")' + "?id=" + id,
+                type: "GET",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    $("#tbdata tbody").html("");
+
+                    if (data != null) {
+
+                        $.each(data, function (i, row) {
+                            $("<tr>").append(
+                                $("<td style='display:none'>").text(row.oVehiculo.tipo),
+                                $("<td>").css("font-size","0.9em").text(row.oVehiculodet.unidad),
+                                $("<td>").css("font-size","0.9em").text(row.codllanta),
+                                $("<td>").css("font-size","0.9em").text(row.oMarca.marca),
+                                $("<td>").css("font-size","0.9em").text(row.posicion),
+                                $("<td>").css("font-size","0.9em").text(row.remanente),
+                                $("<td>").css("font-size","0.9em").text(row.kminstalacion),
+                                $("<td>").css("font-size","0.9em").text(row.nroreencauche),
+                                $("<td>").append(
+                                    $("<input id='fechainspeccion'>").attr({ "type": "text" }).val(row.fechainspeccion).css({ "width": "105px", "font-size": "0.9em" })
+                                ),
+                                $("<td>").append(
+                                    $("<input id='kminspeccion'>").attr({ "type": "number" }).val(row.kminspeccion).css({ "width": "105px", "font-size": "0.9em" })
+                                ),
+                                $("<td>").append(
+                                    $("<input id='remanenteactual'>").attr({ "type": "number" }).val(row.remanenteactual).css({ "width": "100px", "font-size": "0.9em" })
+                                ),
+                                $("<td>").append(
+                                    $("<input id='estadooperacion'>").attr({ "type": "text" }).val(row.estadooperacion).css({ "font-size": "0.9em" })
+                                ),
+                                $("<td>").append(
+                                    $("<input id='observaciones'>").attr({ "type": "text" }).val(row.observaciones).css({ "font-size": "0.9em" })
+                                )
+
+                            ).data("data", row).appendTo("#tbdata tbody");
+                        })
+                    }
+
+                },
+                error: function (error) {
+                    console.log(error)
+                },
+                beforeSend: function () {
+
+                },
+            });
+        }
+            function GuardarCambios() {
+
+                var valido = true;
+                if ($('#tbdata > tbody > tr').length < 1) {
+                    swal("Mensaje", "No existen datos para guardar cambios", "warning")
+                    return;
+                }
+
+                var xml = "<DETALLE>" ;
+
+                $('#tbdata > tbody  > tr').each(function (index, tr) {
+
+
+                    if ($($(tr).find("#remanenteactual")).val() > $(tr).data("data").remanente) {
+                        valido = false;
+                        swal("Mensaje", "El remanente inspección es mayor al remanente actual", "warning")
+                        return;
+                    }
+
+                    if ($($(tr).find("#kminspeccion")).val() < $(tr).data("data").kminstalacion) {
+                        valido = false;
+                        swal("Mensaje", "El km de inspeccion es menor al km de instalación", "warning")
+                        return;
+                    }
+
+                    xml = xml +
+                        "<DATA>" +
+                        "<codllanta>" + $(tr).data("data").codllanta + "</codllanta>" +
+                        "<fechainspeccion>" + $($(tr).find("#fechainspeccion")).val() + "</fechainspeccion>" +
+                        "<kminspeccion>" + $($(tr).find("#kminspeccion")).val() + "</kminspeccion>" +
+                        "<remanenteactual>" + $($(tr).find("#remanenteactual")).val() + "</remanenteactual>" +
+                        "<estadooperacion>" + $($(tr).find("#estadooperacion")).val() + "</estadooperacion>" +
+                        "<observaciones>" + $($(tr).find("#observaciones")).val() + "</observaciones>" +
+                        "</DATA>";
+
+                });
+
+                xml = xml + "</DETALLE>";
+
+
+                if (valido == true) {
+
+                    jQuery.ajax({
+                        url: '@Url.Action("GuardarRemanentes", "Registro")', 
+                        type: "POST",
+                        data: JSON.stringify({ Vxml: xml}),
+                        dataType: "json",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data) {
+
+                                if (data.resultado) {
+                                    swal("Mensaje", "Se guardaron los cambios", "success")
+                                    Buscar()
+                                } else {
+                                    swal("Mensaje", "No se pudo guardar los cambios", "warning")
+                                }
+                        },
+                        error: function (error) {
+                            console.log(error)
+                        },
+                        beforeSend: function () {
+
+                        },
+                    });
+                }
+            }
+
+                $("#cbovehiculo").change(function () {
+
+                    $("#tbdata tbody").html("");
+                })
+
+    </script>
+
+}

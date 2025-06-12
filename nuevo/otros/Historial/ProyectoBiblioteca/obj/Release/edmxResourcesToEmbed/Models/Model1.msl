@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_NEUMATICOSModelStoreContainer" CdmEntityContainer="DB_NEUMATICOSEntities">
+    <EntitySetMapping Name="REMANENTE">
+      <EntityTypeMapping TypeName="DB_NEUMATICOSModel.REMANENTE">
+        <MappingFragment StoreEntitySet="REMANENTE">
+          <ScalarProperty Name="idremanente" ColumnName="idremanente" />
+          <ScalarProperty Name="codllanta" ColumnName="codllanta" />
+          <ScalarProperty Name="fechainspeccion" ColumnName="fechainspeccion" />
+          <ScalarProperty Name="kminspeccion" ColumnName="kminspeccion" />
+          <ScalarProperty Name="remanenteactual" ColumnName="remanenteactual" />
+          <ScalarProperty Name="estadooperacion" ColumnName="estadooperacion" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="fechacreacion" ColumnName="fechacreacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LLANTA">
+      <EntityTypeMapping TypeName="DB_NEUMATICOSModel.LLANTA">
+        <MappingFragment StoreEntitySet="LLANTA">
+          <ScalarProperty Name="remanentereencauche" ColumnName="remanentereencauche" />
+          <ScalarProperty Name="remanenteoriginal" ColumnName="remanenteoriginal" />
+          <ScalarProperty Name="fechacreacion" ColumnName="fechacreacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="idalmacen" ColumnName="idalmacen" />
+          <ScalarProperty Name="nroreencauche" ColumnName="nroreencauche" />
+          <ScalarProperty Name="kminstalacion" ColumnName="kminstalacion" />
+          <ScalarProperty Name="posicion" ColumnName="posicion" />
+          <ScalarProperty Name="remanente" ColumnName="remanente" />
+          <ScalarProperty Name="idmedida" ColumnName="idmedida" />
+          <ScalarProperty Name="idmodelo" ColumnName="idmodelo" />
+          <ScalarProperty Name="idmarca" ColumnName="idmarca" />
+          <ScalarProperty Name="codllanta" ColumnName="codllanta" />
+          <ScalarProperty Name="iddet" ColumnName="iddet" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idllanta" ColumnName="idllanta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

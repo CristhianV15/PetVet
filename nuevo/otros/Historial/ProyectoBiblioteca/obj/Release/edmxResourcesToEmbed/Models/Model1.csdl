@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_NEUMATICOSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="REMANENTE">
+    <Key>
+      <PropertyRef Name="idremanente" />
+    </Key>
+    <Property Name="idremanente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="codllanta" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="fechainspeccion" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="kminspeccion" Type="Int32" />
+    <Property Name="remanenteactual" Type="Int32" />
+    <Property Name="estadooperacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Boolean" />
+    <Property Name="fechacreacion" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="DB_NEUMATICOSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="REMANENTE" EntityType="Self.REMANENTE" />
+    <EntitySet Name="LLANTA" EntityType="DB_NEUMATICOSModel.LLANTA" />
+  </EntityContainer>
+  <EntityType Name="LLANTA">
+    <Key>
+      <PropertyRef Name="idllanta" />
+    </Key>
+    <Property Name="idllanta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int32" />
+    <Property Name="iddet" Type="Int32" />
+    <Property Name="codllanta" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="idmarca" Type="Int32" />
+    <Property Name="idmodelo" Type="Int32" />
+    <Property Name="idmedida" Type="Int32" />
+    <Property Name="remanente" Type="Int32" />
+    <Property Name="posicion" Type="Int32" />
+    <Property Name="kminstalacion" Type="Int32" />
+    <Property Name="nroreencauche" Type="Int32" />
+    <Property Name="idalmacen" Type="Int32" />
+    <Property Name="estado" Type="Boolean" />
+    <Property Name="fechacreacion" Type="DateTime" Precision="3" />
+    <Property Name="remanenteoriginal" Type="Int32" />
+    <Property Name="remanentereencauche" Type="Int32" />
+  </EntityType>
+</Schema>
