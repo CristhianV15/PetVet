@@ -1,0 +1,12 @@
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Moneda)
+                    @Html.EditorFor(model => model.Moneda, new { htmlAttributes = new { @class = "form-control", placeholder = "Moneda" } })
+                    @Html.ValidationMessageFor(model => model.Moneda, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IdMoneda, "idMoneda")
+                    @Html.DropDownListFor(model => model.Nombre, new SelectList(ViewBag.Monedas as System.Collections.IEnumerable, "IdMoneda", "Nombre"), "Seleccione una moneda", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                </div>

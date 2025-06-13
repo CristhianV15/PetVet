@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RDMExport>
+  <Connections>
+    <Connection>
+      <WebBrowserUrl>https://portal.azure.com/#@BPOSGROMERO.onmicrosoft.com/resource/subscriptions/a46fefe4-ea28-4f63-bad8-5b736cfa6310/resourceGroups/AZU-CHIPE-001-BI-PRD-RG-01/providers/Microsoft.Storage/storageAccounts/chipe001biprddls01/storagebrowser</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Caña Brava</Group>
+      <ID>12607e1e-bbb1-4a2c-944f-536f3179b955</ID>
+      <Name>Azure chipe001biprddls01</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>http://chisulweb2:8089/</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Caña Brava</Group>
+      <ID>80abcea6-20d1-4f9a-8366-135397d80a65</ID>
+      <Name>Check Lists Neumaticos</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+    <Connection>
+      <Url>10.183.104.4</Url>
+      <ConnectionType>RDPConfigured</ConnectionType>
+      <Group>Servidores On-Premise</Group>
+      <ID>60c2394b-b5c6-483d-a43a-8578700e2b04</ID>
+      <Name>CHISULBIO1</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ILO />
+      <MetaInformation>
+        <ServerRemoteManagementUrl>10.183.104.4</ServerRemoteManagementUrl>
+      </MetaInformation>
+      <RDP />
+      <Tools>
+        <ILODisplayMode>Embedded</ILODisplayMode>
+        <ILOIsSupported>true</ILOIsSupported>
+      </Tools>
+    </Connection>
+    <Connection>
+      <Url>CHISULBIO2</Url>
+      <ConnectionType>RDPConfigured</ConnectionType>
+      <Group>Servidores Cloud</Group>
+      <ID>17996a80-1879-421a-9baa-d6f07ff0ef9b</ID>
+      <Name>CHISULBIO2</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ILO />
+      <MetaInformation>
+        <ServerRemoteManagementUrl>CHISULBIO2</ServerRemoteManagementUrl>
+      </MetaInformation>
+      <RDP />
+      <Tools>
+        <ILODisplayMode>Embedded</ILODisplayMode>
+        <ILOIsSupported>true</ILOIsSupported>
+      </Tools>
+    </Connection>
+    <Connection>
+      <Url>CHISULCOES</Url>
+      <ConnectionType>RDPConfigured</ConnectionType>
+      <Group>Servidores On-Premise</Group>
+      <ID>d38930d0-e2b5-44ca-aa43-3c8c773ce9d5</ID>
+      <Name>CHISULCOES</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ILO />
+      <MetaInformation>
+        <ServerRemoteManagementUrl>10.183.104.9</ServerRemoteManagementUrl>
+      </MetaInformation>
+      <RDP />
+      <Tools>
+        <ILODisplayMode>Embedded</ILODisplayMode>
+        <ILOIsSupported>true</ILOIsSupported>
+      </Tools>
+    </Connection>
+    <Connection>
+      <Url>CHISULDEV1</Url>
+      <ConnectionType>RDPConfigured</ConnectionType>
+      <Group>Servidores On-Premise</Group>
+      <ID>a7081993-e797-4947-bf2b-9d282003a591</ID>
+      <Name>CHISULDEV1</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ILO />
+      <MetaInformation>
+        <ServerRemoteManagementUrl>CHISULDEV1</ServerRemoteManagementUrl>
+      </MetaInformation>
+      <RDP />
+      <Tools>
+        <ILODisplayMode>Embedded</ILODisplayMode>
+        <ILOIsSupported>true</ILOIsSupported>
+      </Tools>
+    </Connection>
+    <Connection>
+      <Url>CHISULSHP1</Url>
+      <ConnectionType>RDPConfigured</ConnectionType>
+      <Group>Servidores On-Premise</Group>
+      <ID>23fa2235-b614-48c4-8808-38a7ccfa73d5</ID>
+      <Name>CHISULSHP1</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ILO />
+      <MetaInformation>
+        <ServerRemoteManagementUrl>10.183.104.13</ServerRemoteManagementUrl>
+      </MetaInformation>
+      <RDP />
+      <Tools>
+        <ILODisplayMode>Embedded</ILODisplayMode>
+        <ILOIsSupported>true</ILOIsSupported>
+      </Tools>
+    </Connection>
+    <Connection>
+      <Url>CHISULSQL1</Url>
+      <ConnectionType>RDPConfigured</ConnectionType>
+      <Group>Servidores Cloud</Group>
+      <ID>68da12e3-e3ae-4b7d-b312-1c70d61d93ea</ID>
+      <Name>CHISULSQL1</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ILO />
+      <MetaInformation>
+        <ServerRemoteManagementUrl>CHISULSQL1</ServerRemoteManagementUrl>
+        <ServerRemoteManagementUrlLabelOverride>CHISULSQL1</ServerRemoteManagementUrlLabelOverride>
+      </MetaInformation>
+      <RDP />
+      <Tools>
+        <ILODisplayMode>Embedded</ILODisplayMode>
+        <ILOIsSupported>true</ILOIsSupported>
+      </Tools>
+    </Connection>
+    <Connection>
+      <Url>CHISULWEB2</Url>
+      <ConnectionType>RDPConfigured</ConnectionType>
+      <Group>Servidores Cloud</Group>
+      <ID>69862f1d-cb55-4031-9030-b14ac7c9691f</ID>
+      <Name>CHISULWEB2</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ILO />
+      <MetaInformation>
+        <ServerRemoteManagementUrl>CHISULWEB2</ServerRemoteManagementUrl>
+      </MetaInformation>
+      <RDP />
+      <Tools>
+        <ILODisplayMode>Embedded</ILODisplayMode>
+        <ILOIsSupported>true</ILOIsSupported>
+      </Tools>
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>http://servcimplic:9093/inicio-sesion</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Industriales</Group>
+      <ID>70db8655-3f3c-49c1-8df6-251dd165e518</ID>
+      <Name>Cimplicity</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>http://chisulweb2:8080/(S(oyff1yqs5kmlxvcltpoaanhk))/Default.aspx</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Caña Brava</Group>
+      <ID>385c6c6b-7650-442f-b961-ab237e748bf7</ID>
+      <Name>CTC</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+    <Connection>
+      <Url>10.183.104.23</Url>
+      <ConnectionType>RDPConfigured</ConnectionType>
+      <Group>Servidores On-Premise</Group>
+      <ID>151d75ac-c9b2-4895-aa99-ba20a38221e7</ID>
+      <Name>ELEC001</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ILO />
+      <MetaInformation>
+        <ServerRemoteManagementUrl>10.183.104.23</ServerRemoteManagementUrl>
+      </MetaInformation>
+      <RDP />
+      <Tools>
+        <ILODisplayMode>Embedded</ILODisplayMode>
+        <ILOIsSupported>true</ILOIsSupported>
+      </Tools>
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>http://servcimplic:9091/</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Industriales</Group>
+      <ID>9b97b5ea-96be-4605-8bb9-9c4e1f57c386</ID>
+      <Name>Indicadores Industriales</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>https://apps.canabrava.com.pe/intranet/Pages/Login</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Caña Brava</Group>
+      <ID>64c274fc-39b4-452c-bc16-42bada507c73</ID>
+      <Name>Intranet</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>https://app.naxsolutions.com/login</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Caña Brava</Group>
+      <ID>b3faf4a3-abcd-4625-83ec-cf66db9dba1c</ID>
+      <Name>NAX</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web>
+        <DisableSameOriginPolicy>true</DisableSameOriginPolicy>
+        <EnableKeyboardShortcuts>true</EnableKeyboardShortcuts>
+      </Web>
+    </Connection>
+    <Connection>
+      <ConnectionType>Group</ConnectionType>
+      <Group>Paginas Caña Brava</Group>
+      <ID>e1e4f056-ff4e-4504-a691-f047394f5600</ID>
+      <Name>Paginas Caña Brava</Name>
+      <TemplateSourceID>9f0b62c0-421d-40fc-a018-04b6c875573e</TemplateSourceID>
+    </Connection>
+    <Connection>
+      <ConnectionType>Group</ConnectionType>
+      <Group>Paginas Industriales</Group>
+      <ID>7dd10c0c-4296-4166-bc27-a6f98fca4ef5</ID>
+      <Name>Paginas Industriales</Name>
+      <TemplateSourceID>06a7359c-ca61-42ea-980a-931f5b3c4b15</TemplateSourceID>
+    </Connection>
+    <Connection>
+      <ConnectionType>Group</ConnectionType>
+      <Group>PC Robot</Group>
+      <ID>e151cbbf-a4c9-4b7e-bbe9-d5121d5aea4b</ID>
+      <Name>PC Robot</Name>
+      <TemplateSourceID>8c987d27-836e-4bda-842e-2fc27a34a26e</TemplateSourceID>
+    </Connection>
+    <Connection>
+      <ConnectionType>WindowsTerminal</ConnectionType>
+      <Group>Servidores Cloud</Group>
+      <ID>deec4746-beab-4012-bc18-7a50ef078500</ID>
+      <Name>Ping</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ParentID>69862f1d-cb55-4031-9030-b14ac7c9691f</ParentID>
+      <WindowsTerminal>
+        <Contexts>
+          <WindowsTerminalContext>
+            <CommandLine>ping chisulweb2 -t</CommandLine>
+            <Profile>
+              <CommandLine>%SystemRoot%\System32\cmd.exe</CommandLine>
+              <Guid>{88154ac7-30aa-44e1-89d8-d75bff37324f}</Guid>
+              <Name>ping</Name>
+            </Profile>
+            <ProfileMode>Custom</ProfileMode>
+          </WindowsTerminalContext>
+        </Contexts>
+      </WindowsTerminal>
+    </Connection>
+    <Connection>
+      <ConnectionType>WindowsTerminal</ConnectionType>
+      <Group>Servidores Cloud</Group>
+      <ID>f6b43fd9-ffc4-4e4d-9510-ade465f87bd1</ID>
+      <Name>Ping</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ParentID>17996a80-1879-421a-9baa-d6f07ff0ef9b</ParentID>
+      <WindowsTerminal>
+        <Contexts>
+          <WindowsTerminalContext>
+            <CommandLine>ping chisulbio2 -t</CommandLine>
+            <Profile>
+              <CommandLine>%SystemRoot%\System32\cmd.exe</CommandLine>
+              <Guid>{add0c3b6-b9d8-4c99-a06a-3e4487ec8abc}</Guid>
+              <Name>ping</Name>
+            </Profile>
+            <ProfileMode>Custom</ProfileMode>
+          </WindowsTerminalContext>
+        </Contexts>
+      </WindowsTerminal>
+    </Connection>
+    <Connection>
+      <ConnectionType>WindowsTerminal</ConnectionType>
+      <Group>Servidores Cloud</Group>
+      <ID>3f550482-d94f-4cdf-a6e2-f311c2781ced</ID>
+      <Name>Ping</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ParentID>68da12e3-e3ae-4b7d-b312-1c70d61d93ea</ParentID>
+      <WindowsTerminal>
+        <Contexts>
+          <WindowsTerminalContext>
+            <CommandLine>ping chisulsql1 -t</CommandLine>
+            <Profile>
+              <CommandLine>%SystemRoot%\System32\cmd.exe</CommandLine>
+              <Guid>{bafc93b0-1e55-4c8d-bf92-35bf206ac093}</Guid>
+              <Name>ping</Name>
+            </Profile>
+            <ProfileMode>Custom</ProfileMode>
+          </WindowsTerminalContext>
+        </Contexts>
+      </WindowsTerminal>
+    </Connection>
+    <Connection>
+      <ConnectionType>WindowsTerminal</ConnectionType>
+      <Group>Servidores On-Premise</Group>
+      <ID>5f2d485d-b80f-4645-96df-38b656451d85</ID>
+      <Name>Ping</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ParentID>60c2394b-b5c6-483d-a43a-8578700e2b04</ParentID>
+      <WindowsTerminal>
+        <Contexts>
+          <WindowsTerminalContext>
+            <CommandLine>ping 10.183.104.4 -t</CommandLine>
+            <Profile>
+              <CommandLine>%SystemRoot%\System32\cmd.exe</CommandLine>
+              <Guid>{c2564b6b-9bf9-4093-bd3b-05ef75cb5157}</Guid>
+              <Name>ping</Name>
+            </Profile>
+            <ProfileMode>Custom</ProfileMode>
+          </WindowsTerminalContext>
+        </Contexts>
+      </WindowsTerminal>
+    </Connection>
+    <Connection>
+      <ConnectionType>WindowsTerminal</ConnectionType>
+      <Group>Servidores On-Premise</Group>
+      <ID>1de53185-3fc4-489b-afe5-b3e46108ec40</ID>
+      <Name>Ping</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ParentID>d38930d0-e2b5-44ca-aa43-3c8c773ce9d5</ParentID>
+      <WindowsTerminal>
+        <Contexts>
+          <WindowsTerminalContext>
+            <CommandLine>ping chisulcoes -t</CommandLine>
+            <Profile>
+              <CommandLine>%SystemRoot%\System32\cmd.exe</CommandLine>
+              <Guid>{94ea6004-105a-4cc4-99b4-3480530a14ff}</Guid>
+              <Name>ping</Name>
+            </Profile>
+            <ProfileMode>Custom</ProfileMode>
+          </WindowsTerminalContext>
+        </Contexts>
+      </WindowsTerminal>
+    </Connection>
+    <Connection>
+      <ConnectionType>WindowsTerminal</ConnectionType>
+      <Group>Servidores On-Premise</Group>
+      <ID>6f54672d-82b8-4ee8-be67-91e776aa6835</ID>
+      <Name>Ping</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ParentID>a7081993-e797-4947-bf2b-9d282003a591</ParentID>
+      <WindowsTerminal>
+        <Contexts>
+          <WindowsTerminalContext>
+            <CommandLine>ping chisuldev1 -t</CommandLine>
+            <Profile>
+              <CommandLine>%SystemRoot%\System32\cmd.exe</CommandLine>
+              <Guid>{e93cd58a-eeb1-4cfc-96b7-aa11ca7b3732}</Guid>
+              <Name>ping</Name>
+            </Profile>
+            <ProfileMode>Custom</ProfileMode>
+          </WindowsTerminalContext>
+        </Contexts>
+      </WindowsTerminal>
+    </Connection>
+    <Connection>
+      <ConnectionType>WindowsTerminal</ConnectionType>
+      <Group>Servidores Cloud</Group>
+      <ID>7be9fe37-c18a-47f6-9784-4f9a388d8ba8</ID>
+      <Name>Ping</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ParentID>41e9f5ea-281a-45db-a42c-b8c86190590d</ParentID>
+      <WindowsTerminal>
+        <Contexts>
+          <WindowsTerminalContext>
+            <CommandLine>ping servcimplic -t</CommandLine>
+            <Profile>
+              <CommandLine>%SystemRoot%\System32\cmd.exe</CommandLine>
+              <Guid>{27e0f8c2-bc3d-4e1e-a9d8-0b2b55d45d14}</Guid>
+              <Name>ping</Name>
+            </Profile>
+            <ProfileMode>Custom</ProfileMode>
+          </WindowsTerminalContext>
+        </Contexts>
+      </WindowsTerminal>
+    </Connection>
+    <Connection>
+      <ConnectionType>WindowsTerminal</ConnectionType>
+      <Group>Servidores On-Premise</Group>
+      <ID>484150fa-3864-400b-8f66-4fad7bf875f3</ID>
+      <Name>Ping</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ParentID>151d75ac-c9b2-4895-aa99-ba20a38221e7</ParentID>
+      <WindowsTerminal>
+        <Contexts>
+          <WindowsTerminalContext>
+            <CommandLine>ping elec001 -t</CommandLine>
+            <Profile>
+              <CommandLine>%SystemRoot%\System32\cmd.exe</CommandLine>
+              <Guid>{a86c996d-e6af-43d9-b701-e97233a923e9}</Guid>
+              <Name>ping</Name>
+            </Profile>
+            <ProfileMode>Custom</ProfileMode>
+          </WindowsTerminalContext>
+        </Contexts>
+      </WindowsTerminal>
+    </Connection>
+    <Connection>
+      <ConnectionType>WindowsTerminal</ConnectionType>
+      <Group>Servidores On-Premise</Group>
+      <ID>57718266-38da-487b-ac30-357e00c24a70</ID>
+      <Name>Ping</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ParentID>23fa2235-b614-48c4-8808-38a7ccfa73d5</ParentID>
+      <WindowsTerminal>
+        <Contexts>
+          <WindowsTerminalContext>
+            <CommandLine>ping chisulshp1 -t</CommandLine>
+            <Profile>
+              <CommandLine>%SystemRoot%\System32\cmd.exe</CommandLine>
+              <Guid>{cc68b584-7565-46cc-9ebb-a3e0011a307d}</Guid>
+              <Name>ping</Name>
+            </Profile>
+            <ProfileMode>Custom</ProfileMode>
+          </WindowsTerminalContext>
+        </Contexts>
+      </WindowsTerminal>
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>https://app.powerbi.com/home?experience=power-bi</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Caña Brava</Group>
+      <ID>ee6ecef3-4c98-48d1-a3cf-949604482c43</ID>
+      <Name>Power BI</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+    <Connection>
+      <ConnectionSubType>b87d1714-486a-43b5-bb5a-d5a432e5deb5</ConnectionSubType>
+      <ConnectionType>AddOn</ConnectionType>
+      <Group>PC Robot</Group>
+      <ID>de63160e-023b-42f7-b44a-20e18f4bc9ad</ID>
+      <Name>Robot</Name>
+      <AddOn>
+        <Properties>s7GvyM1RKEstKs7Mz7NVMtQzUFJIzUvOT8nMS7dVKi1J07VQsrfj5bJxzKt0SS3Ods7PS8tMLy1KLAGqB4orKNh45BeX+CXmptoZWlgaWxoaG5iY2OjDBYFa9bHqBQA=</Properties>
+      </AddOn>
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>http://chisulshp1/samapp/ElaboracionForm.aspx</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Caña Brava</Group>
+      <ID>b82db0a8-c1c3-49a1-8ed4-26bc28b8c7cd</ID>
+      <Name>ROM</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>http://servcimplic:9090/
+</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Industriales</Group>
+      <ID>a55e3fc6-3f41-4c7c-bba2-aed5ba9a498f</ID>
+      <Name>Scada Electrico</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+    <Connection>
+      <Url>SERVCIMPLIC</Url>
+      <ConnectionType>RDPConfigured</ConnectionType>
+      <Group>Servidores Cloud</Group>
+      <ID>41e9f5ea-281a-45db-a42c-b8c86190590d</ID>
+      <Name>SERVCIMPLIC</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <ILO />
+      <MetaInformation>
+        <ServerRemoteManagementUrl>SERVCIMPLIC</ServerRemoteManagementUrl>
+      </MetaInformation>
+      <RDP />
+      <Tools>
+        <ILODisplayMode>Embedded</ILODisplayMode>
+        <ILOIsSupported>true</ILOIsSupported>
+      </Tools>
+    </Connection>
+    <Connection>
+      <ConnectionType>Group</ConnectionType>
+      <Group>Servidores Cloud</Group>
+      <ID>a7b9419e-4d20-46ab-b053-863f14c6ca78</ID>
+      <Name>Servidores Cloud</Name>
+      <TemplateSourceID>1c2985a6-ecdf-43e4-9b7d-ea6079528d12</TemplateSourceID>
+    </Connection>
+    <Connection>
+      <ConnectionType>Group</ConnectionType>
+      <Group>Servidores On-Premise</Group>
+      <ID>a6131a29-b5eb-43fd-80ea-6267ca0b0ce7</ID>
+      <Name>Servidores On-Premise</Name>
+      <TemplateSourceID>5159530e-c646-4543-ac31-49231c14531e</TemplateSourceID>
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>http://chisulshp1:43430/smad/Inicio.aspx</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Caña Brava</Group>
+      <ID>44e0b75a-ca38-4414-b4f6-beca42a66f93</ID>
+      <Name>SGD</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>http://servcimplic:9092/tickets</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Industriales</Group>
+      <ID>0b4399d0-a9a6-4b6b-a1df-c0f30f051f6b</ID>
+      <Name>Sidesal</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>http://servcimplic:9094/inicio-sesion</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Industriales</Group>
+      <ID>a424bc40-b2e6-4ce3-8124-60240e4dc2e0</ID>
+      <Name>Siop</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+    <Connection>
+      <WebBrowserUrl>https://cloud.uipath.com/chira/portal_/home</WebBrowserUrl>
+      <ConnectionSubType>Default</ConnectionSubType>
+      <ConnectionType>WebBrowser</ConnectionType>
+      <Group>Paginas Caña Brava</Group>
+      <ID>0ead1795-59e2-4470-95da-9dfb6a3dbd8a</ID>
+      <Name>Uipath</Name>
+      <OpenEmbedded>true</OpenEmbedded>
+      <Web />
+    </Connection>
+  </Connections>
+  <DatabaseID>e1e759f5-d52b-4673-9a81-8dbffb4d7df2</DatabaseID>
+  <Version>2</Version>
+</RDMExport>
